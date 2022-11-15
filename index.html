@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="David" >
+		<meta name="description" content="My Technion Presentations">
+
+		<title>Git is Great</title>
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+		
+
+		<!-- Enable Mathjax -->		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section data-background="./images/body.svg">
+					<div>
+						<p>The following presentations reflect my opinions on matters, all are invited to try and change my mind.</p>
+						<p><a href="./234311/git.html">Git is Great!</a></p>
+						<p><a href="./234311/agile.html">Agile is OK.</a></p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>

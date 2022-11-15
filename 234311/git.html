@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="David" >
+		<meta name="description" content="Crash course to get you started with git.">
+
+		<title>Git is Great</title>
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+		
+
+		<!-- Enable Mathjax -->		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section data-background="../images/title.png">
+					<div style="position: absolute; width: 80%; left: -40px; top: 0px;">
+						<h1 style="color:white;">Git is</h1>
+						<h1 style="color:white;">Great!</h1>
+						<h4 style="color:#d39f10;">the bare minimum</h4>
+						<p style="color:#d39f10;">David Dovrat, October 2022</p>
+					</div>
+				</section>
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047">Objectives</h1>
+					</section>
+					<section>
+						<h2 style="color:#002047">Objectives</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								Know that Git exists, and why we like it.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Learn enough basic Git operations to be productive.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Learn about my personal favorite Git workflow.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Acknowledge that GitLab & GitHub are nice and have nice features.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047">Why should we like Git?</h1>
+					</section>
+					<section>
+						<h2 style="color:#002047">We should like Git</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								Because I say so.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Because <a href="https://git-scm.com/about">they</a> say so.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Because <a href="https://web.archive.org/web/20220506201906/https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-other-tools">almost everyone</a> says so.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047;">How should we use Git?</h1>
+					</section>
+					<section data-background-iframe="https://nvie.com/posts/a-successful-git-branching-model/" data-background-interactive></section>
+					<section>
+						<h2 style="color:#002047;">Git Flow</h2>
+						<table style="font-size:24px;">
+							<thead>
+								<tr style="color:#002047; font-size:30px;">
+									<th style="border: 5px solid #d39f10; text-align: center;">Branch</th>
+									<th style="border: 5px solid #d39f10; text-align: center;">Characteristics</th>
+									<th style="border: 5px solid #d39f10; text-align: center;">Created From</th>
+									<th style="border: 5px solid #d39f10; text-align: center;">Merges With</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="background-color: #002047; color: white;">
+									<td style="border: 5px solid #d39f10; text-align: center;">main</td>
+									<td style="border: 5px solid #d39f10; text-align: left;">builds, documented, versioned, tested</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">-</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">version</td>
+								</tr>
+								<tr style="color:#002047;">
+									<th style="border: 5px solid #d39f10; text-align: center;">develop</th>
+									<td style="border: 5px solid #d39f10; text-align: left;">builds, documented</td><th style="border: 5px solid #d39f10; text-align: center;">main</th>
+									<th style="border: 5px solid #d39f10; text-align: center;">feature, hotfix</th>
+								</tr>
+								<tr style="background-color: #002047; color: white;">
+									<td style="border: 5px solid #d39f10; text-align: center;">feature</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">-</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">develop</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">-</td>
+								</tr>
+								<tr style="color:#002047;">
+									<th style="border: 5px solid #d39f10; text-align: center;">version</th>
+									<td style="border: 5px solid #d39f10; text-align: left;">builds, documented, versioned</td>
+									<th style="border: 5px solid #d39f10; text-align: center;">develop</th>
+									<th style="border: 5px solid #d39f10; text-align: center;">hotfix</th>
+								</tr>
+								<tr style="background-color: #002047; color: white;">
+									<td style="border: 5px solid #d39f10; text-align: center;">hotfix</td>
+									<td style="border: 5px solid #d39f10; text-align: left;">versioned</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">version</td>
+									<td style="border: 5px solid #d39f10; text-align: center;">-</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047;">
+							Git - GitLab - Github - Hurray!
+						</h1>
+					</section>
+					<section>
+						<h2 style="color:#002047">I like GitLab because</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								they have a nice <a href="https://gitlab.com/nemala/alate/-/boards">scrum board</a> and labeling system.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								you can tag issues in your <a href="https://gitlab.com/nemala/alate/-/commit/23a2a56beedfd3f8bf3aa27de7ad7196190f212a">commit messages</a> and they automatically update the scrum board issue card.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								nice markdown support for in-project <a href="https://gitlab.com/nemala/alate">documentation</a>.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								free <a href="https://gitlab.com/mars-technion/simulations/-/pipelines">CI/CD</a> and static <a href="https://mars-technion.gitlab.io/simulations/dtb2021a.html">web-hosting</a>!
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="color:#002047">Any public <a href="https://gitlab.cs.technion.ac.il/crl/optitrack">repo</a> should have</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								a .gitignore file.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								a LICENSE.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								a nice README.MD.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-background="../images/body.svg">
+						<h1 style="color:#002047">The Takeaway</h1>
+					</section>
+					<section data-background="../images/body.svg">
+						<h2 style="color:#002047">The Takeaway</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								Git is Great!
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								The vanilla Git-Gui is all you really need to collaborate or work alone...
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								...but Git[Hub, Lab] are good platforms for managing your project and sharing your code.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								We will be using <a href="https://github.com/ICST-Technion">GitHub</a>.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047">Useful Resources</h1>
+					</section>
+					<section>
+						<h2 style="color:#002047">Useful Resources</h2>
+						<ul>
+							<li>
+								<a href="https://git-scm.com">Git project page</a>
+							</li>
+							<li>
+								<a href="https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows">Git Workflows</a>
+							</li>
+							<li>
+								<a href="https://nvie.com/posts/a-successful-git-branching-model">GitFlow Retrospective</a>
+							</li>
+							<li>
+								<a href="https://docs.github.com/en/get-started/quickstart/github-flow">Github-Flow</a>
+							</li>
+							<li>
+								<a href="https://learngitbranching.js.org/">Learn Git Branching</a>
+							</li>
+							<li>
+								<a href="https://youtu.be/Fyc9SXzjlmw">Hebrew Git Howto</a>
+							</li>
+							<li>
+								<a href="https://github.com/ICST-Technion/git-presentation">This Presentation</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>
