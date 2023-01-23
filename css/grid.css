@@ -1,0 +1,9 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo company'
+    'photo title'
+    'address contact';
+  gap: 10px;
+  padding: 10%;
+}

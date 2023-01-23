@@ -8,51 +8,40 @@
 		<meta name="description" content="but you can call me Dr. David Dovrat">
 
 		<title>Dave</title>
+
 		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
 
-		<link rel="stylesheet" href="../revealJS/dist/reset.css">
-		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
-		<link rel="stylesheet" href="../revealJS/dist/theme/white.css">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
-		
-
-		<!-- Enable Mathjax -->		
-		<script type="text/x-mathjax-config">
-			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-		</script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-		</script>
+		<link rel="stylesheet" href="./css/grid.css">
 		
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides" style="text-align: left;">
-				<img src="./images/Technion_TaubCS_Business_Card.svg" alt="My business card" width="120%">
-				<!--section data-background="./images/Technion_TaubCS_Business_Card.svg"></section-->
-			</div>
-		</div>
-
-		<script src="../revealJS/dist/reveal.js"></script>
-		<script src="../revealJS/plugin/zoom/zoom.js"></script>
-		<script src="../revealJS/plugin/notes/notes.js"></script>
-		<script src="../revealJS/plugin/markdown/markdown.js"></script>
-		<script src="../revealJS/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
-			});
-			
-			Reveal.configure({	backgroundTransition: 'concave',
-										transition: 'convex'
-									 });
-		</script>
+		<div class="grid-container" style="text-align: left;">
+		 	<div style="grid-area: logo;">
+		 		<a href="https://cs.technion.ac.il">
+			 		<img src="images/businessCard/Technion_TaubCS_logo.svg" alt="Taub Faculty of CS" width="100%">
+			 	</a>
+		 	</div>
+		 	<div style="grid-area: company;">
+		 		<a href="https://cs.technion.ac.il">
+					<img src="images/businessCard/Technion_TaubCS_title.svg" alt="Taub Faculty of CS" width="90%">
+				</a>
+		 	</div>
+  			<div style="grid-area: photo; padding: 10%; padding-left: 50%; padding-right:0px;">
+	  				<img src="images/businessCard/MyPortrait.svg" alt="Dr. David Dovrat - Roboticist" width="70%">
+  			</div>
+  			<div style="grid-area: title; padding-top: 15%;">
+  					<img src="images/businessCard/MyTitle.svg" alt="Dr. David Dovrat - Roboticist" width="60%">
+  			</div>
+ 			 <div style="grid-area: address;">
+	 			<img src="images/businessCard/address_street.svg" alt="Technion City, Haifa" width="55%">
+	 			<img src="images/businessCard/address_pobox.svg" alt="3200003 Israel" width="45%">
+ 			 </div>
+ 			 <div style="grid-area: contact;">
+ 			 	<a href="mailto:ddovrat@cs.technion.ac.il">
+ 			 		<img src="images/businessCard/email.svg" alt="ddovrat@cs.technion.ac.il" width="70%">
+ 			 	</a>
+				<img src="images/businessCard/WorkWebsite.svg" alt="Taub Faculty of CS" width="60%">
+ 			 </div>
+		</div>	
 	</body>
 </html>
