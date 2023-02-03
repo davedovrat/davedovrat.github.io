@@ -1,9 +1,17 @@
-.grid-container {
+.grid-container-bc {
   display: grid;
   grid-template-areas:
     'logo company'
     'photo title'
     'address contact';
+  gap: 10px;
+  padding: 10%;
+}
+
+.grid-container-cv {
+  display: grid;
+  grid-template-areas:
+    'logo table table table';
   gap: 10px;
   padding: 10%;
 }
