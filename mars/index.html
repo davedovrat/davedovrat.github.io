@@ -30,9 +30,9 @@
 	<body>
 		<div class="reveal" style="font-family:'Assistant';">
 			<div class="slides" style="text-align: left;">
-				<section data-background="../images/title.png">
+				<section ><!--data-background="../images/title.png">-->
 					<div style="position: absolute; width: 80%; left: -40px; top: 0px;">
-						<h1 style="color:white;">MARS</h1>
+						<!--h1 style="color:white;"--><h1 style="color:#002047;">MARS</h1>
 						<h4 style="color:#d39f10;">Consensus in Pursuit</h4>
 						<p style="color:#d39f10;">David Dovrat, May 2023</p>
 					</div>
@@ -110,7 +110,10 @@
 						</p>
 						</div>
 					</section>
-					<section data-background-iframe="nlogo/Consensus.html"  data-background-interactive></section>
+					<!--section data-background-iframe="nlogo/Consensus.html"  data-background-interactive></section-->
+					<section>
+						<a href="https://davedovrat.github.io/mars/nlogo/Consensus.html">Consesnsus Simulation</a>
+					</section>
 				</section>
 				<section data-background="../images/body.svg">
 					<section>
@@ -136,8 +139,11 @@
 							$$ y(x) = \frac{\left({x_0 - x}\right)^2 }{4 x_0} - \frac{x_0}{2} \ln\left({\frac{x_0 - x}{x_0}}\right). $$
 						</p>
 						</div>
+					</section><!--
+					<section style="text-align: center;" data-background-iframe="nlogo/pure_pursuit.html" data-background-interactive></section>-->
+					<section> 
+						<a href="https://davedovrat.github.io/mars/nlogo/pure_pursuit.html">Pure Pursuit Simulation</a>
 					</section>
-					<section style="text-align: center;" data-background-iframe="nlogo/pure_pursuit.html" data-background-interactive></section>
 					<section>
 						<h2 style="color:#002047;">Cyclic Pursuit</h2>
 						<p>
@@ -156,9 +162,9 @@
 						<h2 style="color:#002047;">Unicycle Cyclic Pursuit</h2>
 						<div class="grid-container-half">
 							<div class="right">
-								<img src="./images/unicycleModel.png" alt="Unicycle Model Diagram" width="100%">
+								<img src="./images/unicycleModel.png" alt="Unicycle Model Diagram" width="70%">
 							</div>
-							<div class="left" style="width: 400px;">
+							<div class="left" style="width: 300px;">
 								<p class="r-fit-text">
 									$$
 									\left[
@@ -188,14 +194,20 @@
 							</div>
 						</div>
 					</section>
-					<section data-background-iframe="nlogo/unicycleCyclicPursuit.html"  data-background-interactive></section>
+					<!--section data-background-iframe="nlogo/unicycleCyclicPursuit.html"  data-background-interactive></section-->
+					<section>
+						<a href="https://davedovrat.github.io/mars/nlogo/unicycleCyclicPursuit.html">Unicycle Cyclic Pursuit Simulation</a>
+					</section>
 					</section>
 				</section>
 				<section data-background="../images/body.svg">
 					<section>
 						<h1  style="color:#002047;">Bringing it all together</h1>
+					</section><!--
+					<section style="text-align: center;" data-background-iframe="nlogo/dovrat2017.html" data-background-interactive></section>-->
+					<section>
+						<a href="https://davedovrat.github.io/mars/nlogo/dovrat2017.html">Unicycle Agents with Limited Sector Visibility Simulation</a>
 					</section>
-					<section style="text-align: center;" data-background-iframe="nlogo/dovrat2017.html" data-background-interactive></section>
 					<section>
 						<h2  style="color:#002047;">Gathering of Unicycle Bearing-Only Sector Visibility</h2>
 						<p>
@@ -240,7 +252,10 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				
+				margin: 0.4,
+				embedded: false,
+				  
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
 			});
