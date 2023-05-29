@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="daved" >
+		<meta name="description" content="236604 - On Multi-Agent Robotic Systems">
+
+		<title>Multi-Agent Systems</title>
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/white.css">
+		<link rel="stylesheet" type="text/css" href="../mars/css/grid.css" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+		
+
+		<!-- Enable Mathjax -->		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal" style="font-family:'Assistant';">
+			<div class="slides" style="text-align: left;">
+				<section data-background="../images/title.png">
+					<div style="position: absolute; width: 80%; left: -40px; top: 0px;">
+						<h1 style="color:white;">MARS</h1>
+						<h4 style="color:#d39f10;">Is it practical?</h4>
+						<p style="color:#d39f10;">David Dovrat, May 2023</p>
+					</div>
+				</section>
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047">Agenda</h1>
+					</section>
+					<section>
+						<h2 style="color:#002047">We will talk about:</h2>
+						<ul class="r-fit-text">
+							<li class="fragment fade-in">
+								Methods of manipulating gathering algorithms.
+							</li>
+							<li class="fragment fade-in">
+								Whether the "world" is continuous, discrete, both or neither...
+							</li>
+							<li class="fragment fade-in">
+								How to complicate a problem by simplifying it.
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section style="text-align: center;">
+						<h1 style="color:#002047;">manipulation</h1>
+						<h4 style="color:#002047;">of</h4>
+						<h1 style="color:#002047;">gathering algorithms</h1>
+						<h4 style="color:#002047;">(a non-exhaustive list)</h4> 
+					</section>
+					<section>
+						<h2 style="color:#002047;" style="text-align: center;">Consensus</h2>
+						<div class="r-fit-text">
+						<p>
+							$$
+								\dot{p}_i = \sum \limits_{j \sim i} (p_j - p_i),
+							$$
+						</p>
+						<p>
+							or in matrix notation:
+						</p>
+						<p>
+							$$
+								\dot{p} = -L(\mathcal{G})p
+							$$
+						</p>
+						<p>
+							where $\mathcal{G} = (\mathcal{V},\mathcal{E})$ is the system graph depicting which nodes are connected to which, and $L(\mathcal{G})$ is the corresponding graph Laplacian.
+						</p>
+						</div>
+					</section>
+					<section style="text-align: center;">
+						<h2 style="color:#002047;">Good-Old-Fashioned Hijacking</h2>
+					</section>
+					<section data-background-iframe="../mars/nlogo/Consensus.html"  data-background-interactive></section>
+					<section style="text-align: center;">
+						<h2 style="color:#002047;">Broadcast Control</h2>
+					</section>
+					<section data-background-iframe="https://freddy.cs.technion.ac.il/wp-content/uploads/2022/02/BroadcastGuidanceSurveyIJCCC2022-1.pdf"  data-background-interactive></section>
+					<section style="text-align: center;">
+						<h2 style="color:#002047;">Gradient Ascent over a Scalar Potential Field</h2>
+					</section>
+					<section data-background-iframe="https://freddy.cs.technion.ac.il/wp-content/uploads/2017/12/%E2%80%9CRobot-Cloud%E2%80%9D-gradient-climbing-with-point-measurements.pdf"  data-background-interactive></section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section style="text-align: center;">
+						<h1 style="color:#002047;">Is the universe continuous or discrete?</h1>
+					</section>
+					<section style="text-align: center;">
+						<h1 style="color:#002047;">46</h1>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section style="text-align: center;">
+						<h1 style="color:#002047;">My problems with unicycles</h1>
+					</section>
+					<section>
+						<h2 style="color:#002047;">Unicycle Model</h2>
+						<div class="grid-container-half">
+							<div class="right">
+								<img src="../mars/images/unicycleModel.png" alt="Unicycle Model Diagram" width="100%">
+							</div>
+							<div class="left" style="width: 400px;">
+								<p class="r-fit-text">
+									$$
+									\left[
+									\begin{array}{c}
+									\dot{x}_i\\
+									\dot{y}_i\\
+									\dot{\theta}_i
+									\end{array}
+									\right]
+									=
+									\left[
+									\begin{array}{cc}
+									\cos\theta_i & 0\\
+									\sin\theta_i & 0\\
+									0 & 1
+									\end{array}
+									\right]
+									\left[
+									\begin{array}{c}
+									v_i\\
+									\omega_i
+									\end{array}
+									\right]
+									$$
+								</p>
+								<p class="r-fit-text">The Unicycle Model is a popular simplification of vehicles that have a "forward" orientation and cannot move sideways.</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2 style="color:#002047;">Cyclic Pursuit</h2>
+						<p>
+							$$
+								\dot{p_i} = \frac{p_{i+1} - p_i}{\left\vert p_{i+1} - p_i \right\vert}
+							$$
+						</p>
+						<p>
+							Similar to unidirectional ring topology consensus if the agents had bearing only sensors or constant, uniform speed.
+						</p>
+					</section>
+					<section>
+						<h2 style="color:#002047;">Unicycle Cyclic Pursuit</h2>
+						<div class="grid-container-half">
+							<div class="right">
+								<img src="../mars/images/unicyclePursuit.png" alt="Unicycle Pursuit Diagram" width="100%">
+							</div>
+							<div class="left" style="width: 400px;">
+								<p class="r-fit-text">
+								$$
+								\dot{p_i} = \frac{p_{i+1} - p_i}{\left\vert p_{i+1} - p_i \right\vert}
+								$$
+								</p>
+								<p class="r-fit-text">
+									$$
+									\left[
+									\begin{array}{c}
+									\dot{x}_i\\
+									\dot{y}_i\\
+									\dot{\theta}_i
+									\end{array}
+									\right]
+									=
+									\left[
+									\begin{array}{cc}
+									\cos\theta_i & 0\\
+									\sin\theta_i & 0\\
+									0 & 1
+									\end{array}
+									\right]
+									\left[
+									\begin{array}{c}
+									v_i\\
+									\omega_i
+									\end{array}
+									\right]
+									$$
+								</p>
+								<p class="r-fit-text">The Unicycle Model is a popular simplification of vehicles that have a "forward" orientation and cannot move sideways.</p>
+							</div>
+						</div>
+					</section>
+					<section data-background-iframe="../mars/nlogo/unicycleCyclicPursuit.html"  data-background-interactive></section>
+					</section>
+				</section>
+				<section data-background="../images/body.svg">
+					<section style="text-align: center;">
+						<h1  style="color:#002047;">Bringing it all together</h1>
+					</section>
+					<section style="text-align: center;" data-background-iframe="https://freddy.cs.technion.ac.il/wp-content/uploads/2018/02/On-gathering-and-control-of-unicycle-agents.pdf" data-background-interactive></section>
+					<section style="text-align: center;" data-background-iframe="../mars/nlogo/dovrat2017.html" data-background-interactive></section>
+				</section>	
+				<section data-background="../images/body.svg">
+					<section>
+						<h1 style="color:#002047">Useful Resources</h1>
+					</section>
+					<section>
+						<h2  style="color:#002047;">Gathering of Unicycle Bearing-Only Sector Visibility</h2>
+						<p>
+						David Dovrat and Alfred M. Bruckstein, "On gathering and control of unicycle a(ge)nts with crude sensing capabilities", <a href="https://doi.org/10.1109/MIS.2017.4531231"><em>IEEE Intelligent Systems</em></a>, vol. 32, no. 6, pp. 40–46, Nov./Dec. 2017.
+						</p>
+					</section>
+					<section>
+						<h2 style="color:#002047">Useful Resources</h2>
+						<ul>
+							<li>This Presentation @ https://davedovrat.github.io/236604/</li>
+							<li>
+								<a href="https://tasp.technion.ac.il/">Technion Autonomous Systems Program</a>
+							</li>
+							<li>
+								<a href="https://cis.cs.technion.ac.il">Center for Intelligent Systems</a>
+							</li>
+							<li>
+								Freddy Bruckstein's personal <a href="https://freddy.cs.technion.ac.il/" >website</a>
+							</li>
+							<li>
+								My personal <a href="https://davedovrat.github.io/">website</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>
