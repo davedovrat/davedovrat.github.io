@@ -8,15 +8,19 @@
 		<meta name="description" content="Be agile but try to be cool about it.">
 
 		<title>Agile</title>
+
 		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
 
 		<link rel="stylesheet" href="../revealJS/dist/reset.css">
 		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
-		<link rel="stylesheet" href="../revealJS/dist/theme/white.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/simple.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
 		
+		<!-- costom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../css/cs_presentation.css">
 
 		<!-- Enable Mathjax -->		
 		<script type="text/x-mathjax-config">
@@ -24,63 +28,78 @@
 		</script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		</script>
-		
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides" style="text-align: left;">
-				<section data-background="../images/title.png">
-					<div style="position: absolute; width: 80%; left: -40px; top: 0px;">
-						<h1 style="color:white;">Agile</h1>
-						<h1 style="color:white;"> is OK!</h1>
-						<h4 style="color:#d39f10;">the bare minimum</h4>
-						<p style="color:#d39f10;">David Dovrat, November 2022</p>
+				<section data-background-color="white" style="padding:0;">
+					<div class="cs-presentation-title">
+						<div class="cs-presentation-title-trapezoid"></div>
+						<div style="padding-top:10%;">
+							<h1>Agile is OK!</h1>
+							<h2 style="background-color: #d39f10; color: white;">the bare minimum</h2>
+						</div>
 					</div>
+					<div class= "cs-presentation-footer" style= "padding-left: 50px">
+						<div class="cs-presentation-footer-logo">
+							<p style="color:#d39f10; ">David Dovrat, November 2025</p>
+						</div>
+						<div class="cs-presentation-footer-logo">
+							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+						</div>
+					<div>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047">Objectives</h1>
+						<div>
+							<h1>Objectives</h1>
+						</div>
 					</section>
 					<section>
-						<h2 style="color:#002047">We will:</h2>
-						<ul>
-							<li class="fragment fade-in-then-semi-out">
-								Learn that Agile software development methodologies exists, and that we hate them.
-							</li>
-							<li class="fragment fade-in-then-semi-out">
-								Learn enough buzz words to impress our friends.
-							</li>
-							<li class="fragment fade-in-then-semi-out">
-								Learn about Scrum, my personal favorite methodology.
-							</li>
-							<li class="fragment fade-in-then-semi-out">
-								Acknowledge that the underlying ideology is valid, and is worth pursuing.
-							</li>
-						</ul>
+						<div>
+							<h2>We will:</h2>
+							<ul>
+								<li class="fragment fade-in-then-semi-out">
+									Learn that Agile software development methodologies exists, and that we hate them.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Learn enough buzz words to impress our friends.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Learn about Scrum, my personal favorite methodology.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Acknowledge that the underlying ideology is valid, and is worth pursuing.
+								</li>
+							</ul>
+						</div>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047">What is Agile?</h1>
+						<h1>What is Agile?</h1>
 					</section>
 					<section data-background-iframe="https://agilemanifesto.org/" data-background-interactive></section>
 					<section>
-						<h2 style="color:#002047">A revolution</h2>
-						<blockquote style="width: 80%;" cite="https://www.youtube.com/watch?v=eXvBjCO19QY">
-							&ldquo;It's time for us as a people to start makin' some changes: let's change the way we eat, 
+						<div style="padding-right: 20vw;">
+							<h2>A revolution</h2>
+							<blockquote style="width: 70%;" cite="https://www.youtube.com/watch?v=eXvBjCO19QY">
+							&ldquo;It's time for us as a people to start makin' some changes: let's change the way we eat,
 							let's change the way we live, and let's change the way we treat each other.
 							You see, the old way wasn't workin'
 							so it's on us to do what we gotta do to survive.&rdquo;
-						</blockquote>
-						<p style="text-align: right;">- Tupac Shakur</p>
+							</blockquote>
+							<p style="text-align: right;">- Tupac Shakur</p>
+						<div>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047;">So what went wrong?</h1>
+						<h1>So what went wrong?</h1>
 					</section>
 					<section>
-						<h2 style="color:#002047;">Too school for cool</h2>
+						<h2>Too school for cool</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">The main pitfall: missing the point.</li>
 							<li class="fragment fade-in-then-semi-out">Jira</li>
@@ -89,14 +108,14 @@
 						</ul>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047;">
+						<h1>
 							Scrum
 						</h1>
 					</section>
 					<section>
-						<h2 style="color:#002047">What is scrum?</h2>
+						<h2>What is scrum?</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">
 								Something to do with rugby, a metaphor for teamwork I guess. 
@@ -110,7 +129,7 @@
 						</ul>
 					</section>
 					<section>
-						<h2 style="color:#002047">How to scrum?</h2>
+						<h2>How to scrum?</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">
 								User Stories to Use Cases to Issues to Tasks 
@@ -136,12 +155,13 @@
 						</ul>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047;">Scrum@234311 (We are judging you)</h1>
+						<h1>Scrum@234311</h1>
+						<h2>(We are judging you)</h2>
 					</section>
 					<section>
-						<h2 style="color:#002047;">HLD</h2>
+						<h2>HLD</h2>
 						<ol>
 							<li class="fragment fade-in">MVP ASAP</li>
 							<li class="fragment fade-in">User Stories</li>
@@ -153,7 +173,7 @@
 						</ol>
 					</section>
 					<section>
-						<h2 style="color:#002047;">Sprints</h2>
+						<h2>Sprints</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">Plan sprints one at a time (poker?)</li>
 							<li class="fragment fade-in-then-semi-out">Use Kanban features in Github</li>
@@ -165,11 +185,11 @@
 					</section>
 				</section>
 				<section>
-					<section data-background="../images/body.svg">
-						<h1 style="color:#002047">The Takeaway</h1>
+					<section>
+						<h1>The Takeaway</h1>
 					</section>
-					<section data-background="../images/body.svg">
-						<h2 style="color:#002047">Prioritize individuals and interactions over processes and tools</h2>
+					<section>
+						<h2>Prioritize individuals and interactions over processes and tools</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">
 								Use the tools available to enter an Agile state of mind.
@@ -183,8 +203,8 @@
 							</li>
 						</ul>
 					</section>
-					<section data-background="../images/body.svg">
-						<h2 style="color:#002047">Working software over comprehensive documentation</h2>
+					<section>
+						<h2>Working software over comprehensive documentation</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">
 								TDD where applicable.
@@ -198,16 +218,16 @@
 							</li>
 						</ul>
 					</section>
-					<section data-background="../images/body.svg">
-						<h2 style="color:#002047">Customer collaboration over contract negotiation</h2>
+					<section>
+						<h2>Customer collaboration over contract negotiation</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">Short, frequent sprints.</li>
 							<li class="fragment fade-in-then-semi-out">MVP hop.</li>
 							<li class="fragment fade-in-then-semi-out">Don't skip sprint review.</li>
 						</ul>
 					</section>
-					<section data-background="../images/body.svg">
-						<h2 style="color:#002047">Responding to change over following a plan</h2>
+					<section>
+						<h2>Responding to change over following a plan</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">Never ending backlog grooming.</li>
 							<li class="fragment fade-in-then-semi-out">Split issues to tasks and tasks to sub-tasks. Divide and conquer.</li>
@@ -215,20 +235,22 @@
 							<li class="fragment fade-in-then-semi-out">Avoid Scope Creep</li>
 						</ul>
 					</section>
-					<section data-background="../images/body.svg">
-						<h2 style="color:#002047">Responding to change over following a plan</h2>
-						<blockquote style="width: 80%;" cite="https://quoteinvestigator.com/2017/11/18/planning/">
+					<section>
+						<div style="padding-right: 20vw;">
+							<h2>Responding to change over following a plan</h2>
+							<blockquote style="width: 70%;" cite="https://quoteinvestigator.com/2017/11/18/planning/">
 							&ldquo;The best generals are those who arrive at the results of planning without being tied to plans.&rdquo;
-						</blockquote>
-						<p style="text-align: right;">-  Winston S. Churchill</p>
+							</blockquote>
+							<p style="text-align: right;">-  Winston S. Churchill</p>
+						</div>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047">Useful Resources & Further Inquiry</h1>
+						<h1>Useful Resources & Further Inquiry</h1>
 					</section>
 					<section>
-						<h2 style="color:#002047">Useful Resources</h2>
+						<h2>Useful Resources</h2>
 						<ul>
 							<li>
 								<a href="https://agilemanifesto.org/">Manifesto for Agile Software Development</a>
@@ -245,7 +267,7 @@
 						</ul>
 					</section>
 					<section>
-						<h2 style="color:#002047">Recommended Googling</h2>
+						<h2>Recommended Googling</h2>
 						<ul>
 							<li>
 								"Software Development Process".
@@ -263,6 +285,13 @@
 					</section>
 				</section>
 			</div>
+
+			<div class="cs-presentation-footer">
+				<div class="cs-presentation-footer-trapezoid"></div>
+				<div class="cs-presentation-footer-logo">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+				</div>
+			</div>
 		</div>
 
 		<script src="../revealJS/dist/reveal.js"></script>
@@ -276,9 +305,9 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				disableLayout: true,
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
+				plugins: [RevealZoom]
 			});
 			
 			Reveal.configure({	backgroundTransition: 'concave',
