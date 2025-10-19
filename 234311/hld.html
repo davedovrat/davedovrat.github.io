@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="David" >
+		<meta name="description" content="HLD requirements.">
+
+		<title>HLD</title>
+
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+		
+		<!-- costom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../css/cs_presentation.css">
+
+		<!-- Enable Mathjax -->		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section data-background-color="white" style="padding:0;">
+					<div class="cs-presentation-title">
+						<div class="cs-presentation-title-trapezoid"></div>
+						<div style="padding-top:10%;">
+							<h1>HLD</h1>
+							<h2 style="background-color: #d39f10; color: white;">High Lucy Diamonds</h2>
+						</div>
+					</div>
+					<div class= "cs-presentation-footer" style= "padding-left: 50px">
+						<div class="cs-presentation-footer-logo">
+							<p style="color:#d39f10; ">David Dovrat, November 2025</p>
+						</div>
+						<div class="cs-presentation-footer-logo">
+							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+						</div>
+					<div>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>Objectives</h1>
+						</div>
+					</section>
+					<section>
+						<div style="padding-right: 20vw;">
+							<h2>We're so agile why bother with planning?</h2>
+							<blockquote style="width: 70%;" cite="https://quoteinvestigator.com/2017/11/18/planning/">
+							&ldquo;The best generals are those who arrive at the results of planning without being tied to plans.&rdquo;
+							</blockquote>
+							<p style="text-align: right;">-  Winston S. Churchill</p>
+						</div>
+					</section>
+					<section>
+						<div>
+							<h2>We will:</h2>
+							<ul>
+								<li class="fragment fade-in-then-semi-out">
+									Learn the motivation for high level design.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Learn the structure of an adequate HLD.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Learn about Scrum, my personal favorite methodology.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Acknowledge that the underlying ideology is valid, and is worth pursuing.
+								</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>Motivation</h1>
+							<h2>Or: we're so agile why bother with planning?</h2>
+						</div>
+					</section>
+					<section>
+						<div style="padding-right: 20vw;">
+							<blockquote style="width: 70%;" cite="https://quoteinvestigator.com/2017/11/18/planning/">
+							&ldquo;The best generals are those who arrive at the results of planning without being tied to plans.&rdquo;
+							</blockquote>
+							<p style="text-align: right;">-  Winston S. Churchill</p>
+						</div>
+					</section>
+				<section>
+					<section>
+						<h2>HLD</h2>
+						<ol>
+							<li class="fragment fade-in">MVP ASAP</li>
+							<li class="fragment fade-in">User Stories</li>
+							<li class="fragment fade-in">Use Case UML</li>
+							<li class="fragment fade-in">HLD - Architecture & Frameworks</li>
+							<li class="fragment fade-in">Deployment UML</li>
+							<li class="fragment fade-in">Backlog towards POC</li>
+							<li class="fragment fade-in"><em>Sprint 1</em></li>																				
+						</ol>
+					</section>
+					<section>
+						<h2>Sprints</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">Plan sprints one at a time (poker?)</li>
+							<li class="fragment fade-in-then-semi-out">Use Kanban features in Github</li>
+							<li class="fragment fade-in-then-semi-out">Review sprints</li>
+							<li class="fragment fade-in-then-semi-out">Retrospect sprints</li>
+							<li class="fragment fade-in-then-semi-out">MVP hop</li>
+							<li class="fragment fade-in-then-semi-out">Extra points for TDD & CI/CD</li>																	
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>The Takeaway</h1>
+					</section>
+					<section>
+						<h2>Prioritize individuals and interactions over processes and tools</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								Use the tools available to enter an Agile state of mind.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Remember that your team is made of individuals with different backgrounds, skill-sets and characters.
+								Work with that and not against that.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Discard the tools that don't fit your team. 
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Working software over comprehensive documentation</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">
+								TDD where applicable.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								Short HLD.
+							</li>
+							
+							<li class="fragment fade-in-then-semi-out">
+								Prioritize features over wikis.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Customer collaboration over contract negotiation</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">Short, frequent sprints.</li>
+							<li class="fragment fade-in-then-semi-out">MVP hop.</li>
+							<li class="fragment fade-in-then-semi-out">Don't skip sprint review.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Responding to change over following a plan</h2>
+						<ul>
+							<li class="fragment fade-in-then-semi-out">Never ending backlog grooming.</li>
+							<li class="fragment fade-in-then-semi-out">Split issues to tasks and tasks to sub-tasks. Divide and conquer.</li>
+							<li class="fragment fade-in-then-semi-out">Plan and Retrospect one sprint at a time.</li>
+							<li class="fragment fade-in-then-semi-out">Avoid Scope Creep</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Useful Resources & Further Inquiry</h1>
+					</section>
+					<section>
+						<h2>Useful Resources</h2>
+						<ul>
+							<li>
+								<a href="https://agilemanifesto.org/">Manifesto for Agile Software Development</a>
+							</li>
+							<li>
+								<a href="https://scrumguides.org/">Scrum Guides</a>
+							</li>
+							<li>
+								<a href="https://easybacklog.com/">easyBacklog</a>
+							</li>
+							<li>
+								<a href="https://www.scrumpoker-online.org/en/">Scrum Poker Online</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Recommended Googling</h2>
+						<ul>
+							<li>
+								"Software Development Process".
+							</li>
+							<li>
+								"Agile meme".
+							</li>
+							<li>
+								"Scrum dark side".
+							</li>
+							<li>
+								"Tupac Shakur". RIP.
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+
+			<div class="cs-presentation-footer">
+				<div class="cs-presentation-footer-trapezoid"></div>
+				<div class="cs-presentation-footer-logo">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+				</div>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealZoom]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>
