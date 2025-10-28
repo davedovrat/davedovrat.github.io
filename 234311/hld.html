@@ -18,7 +18,7 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
 		
-		<!-- costom -->
+		<!-- custom -->
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
 		<link rel="stylesheet" href="../css/cs_presentation.css">
 
@@ -27,6 +27,11 @@
 			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 		</script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+		<!-- Mermaid -->
+		<script type="module">
+			import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 		</script>
 
 	</head>
@@ -38,12 +43,12 @@
 						<div class="cs-presentation-title-trapezoid"></div>
 						<div style="padding-top:10%;">
 							<h1>HLD</h1>
-							<h2 style="background-color: #d39f10; color: white;">High Lucy Diamonds</h2>
+							<h2 style="background-color: #d39f10; color: white;">Hi Lucy Diamonds</h2>
 						</div>
 					</div>
 					<div class= "cs-presentation-footer" style= "padding-left: 50px">
 						<div class="cs-presentation-footer-logo">
-							<p style="color:#d39f10; ">David Dovrat, November 2025</p>
+							<p style="color:#d39f10; ">David Dovrat, October 2025</p>
 						</div>
 						<div class="cs-presentation-footer-logo">
 							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
@@ -106,20 +111,45 @@
 						<ul>
 							<li class="fragment fade-in">As a student,</li>
 							<li class="fragment fade-in">I want to write user stories,</li>
-							<li class="fragment fade-in">so I can make my adviser happy</li>
+							<li class="fragment fade-in">so I can make my supervisor happy</li>
 						</ul>
 						<ul>
-							<li class="fragment fade-in">As an adviser,</li>
+							<li class="fragment fade-in">As a supervisor,</li>
 							<li class="fragment fade-in">I want to grade user stories,</li>
 							<li class="fragment fade-in">so I can be happy</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Use Case Diagram</h2>
+						<div>
+					<pre class="mermaid">
+							sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+
+					</pre>
+				</div>
 					</section>
 					<section>
 						<h2>Divide & Conquer User Stories to Issues</h2>
 						<p>And then issues to tasks.</p>
+					</section>
+					<section>
+						<h2>Acceptance Criteria</h2>
+						<ul>
+							<li class="fragment fade-in">So you'll know when to stop.</li>
+							<li class="fragment fade-in">Lends itself to automated tests.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Behavior Analysis</h1>
+						<h2>Consider the how as well as the what.</h2>
+					</section>
+					<section>
+						<h2>Sequence Diagram</h2>
 					</section>
 				</section>
 				<section>
@@ -142,6 +172,14 @@
 				</section>
 				<section>
 					<section>
+						<h1>Environments</h1>
+					</section>
+					<section>
+						<h2>CI/CD & TDD</h2>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h1>Risk Management</h1>
 					</section>
 					<section>
@@ -156,16 +194,13 @@
 						<h2>Useful Resources</h2>
 						<ul>
 							<li>
-								<a href="https://agilemanifesto.org/">Manifesto for Agile Software Development</a>
+								<a href="https://github.com/ogheorghies/MetaUML">MetaUML</a>
 							</li>
 							<li>
-								<a href="https://scrumguides.org/">Scrum Guides</a>
+								<a href="https://hub.docker.com/r/davidovrat/metapost">My MetaPost docker container</a>
 							</li>
 							<li>
-								<a href="https://easybacklog.com/">easyBacklog</a>
-							</li>
-							<li>
-								<a href="https://www.scrumpoker-online.org/en/">Scrum Poker Online</a>
+								<a href="https://docs.mermaidchart.com/mermaid-oss/syntax/examples.html">Mermaid Chart</a>
 							</li>
 						</ul>
 					</section>
