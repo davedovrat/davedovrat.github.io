@@ -44,6 +44,7 @@
 						<div style="padding-top:10%;">
 							<h1>HLD</h1>
 							<h2 style="background-color: #d39f10; color: white;">Hi Lucy Diamonds</h2>
+							<h3>Due 19.11.25, 10:30</h3>
 						</div>
 					</div>
 					<div class= "cs-presentation-footer" style= "padding-left: 50px">
@@ -103,6 +104,45 @@
 				</section>
 				<section>
 					<section>
+						<h1>Structure</h1>
+					</section>
+					<section>
+						<h2>HLD Structure</h2>
+						<ol>
+							<li>
+								<h4>User Stories</h4>
+								<ol>
+									<li>User Story list.</li>
+									<li>Use Case Diagram.</li>
+									<li>Sequence Diagram.</li>
+									<li>Break down to tasks.</li>
+									<li>Task acceptance criteria.</li>
+								</ol>
+							</li>
+						</ol>
+						<ol start="2"  class="fragment fade-in">
+							<li>
+								<h4>Architecture</h4>
+								<ol>
+									<li>Alternatives & Discussion.</li>
+									<li>Deployment Diagram.</li>
+									<li>CI/CD plan.</li>
+								</ol>
+							</li>
+						</ol>
+						<ol start="3"  class="fragment fade-in">
+							<li>
+								<h4>Risk Management</h4>
+								<ol>
+									<li>Risks and mitigation.</li>
+									<li>POC recognition.</li>
+								</ol>
+							</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h1>User Stories</h1>
 					</section>
 					<section>
@@ -121,15 +161,21 @@
 					</section>
 					<section>
 						<h2>Use Case Diagram</h2>
-						<div>
-					<pre class="mermaid">
-							sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-    Alice-)John: See you later!
-
-					</pre>
-				</div>
+						<p style="text-align: center;" >
+							<img src="./images/use_case.svg" style="width:75%" alt="Use Case Diagram">
+						</p>
+					</section>
+					<section>
+						<h2>Sequence Diagram</h2>
+						<p>Consider the how as well as the what.</p>
+						<div style="margin: auto; width: 30%;">
+							<pre class="mermaid">
+								sequenceDiagram
+								Alice->>John: Hello John, how are you?
+								John-->>Alice: Great!
+								Alice-)John: See you later!
+							</pre>
+						</div>
 					</section>
 					<section>
 						<h2>Divide & Conquer User Stories to Issues</h2>
@@ -141,15 +187,6 @@
 							<li class="fragment fade-in">So you'll know when to stop.</li>
 							<li class="fragment fade-in">Lends itself to automated tests.</li>
 						</ul>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1>Behavior Analysis</h1>
-						<h2>Consider the how as well as the what.</h2>
-					</section>
-					<section>
-						<h2>Sequence Diagram</h2>
 					</section>
 				</section>
 				<section>
@@ -168,14 +205,18 @@
 					</section>
 					<section>
 						<h2>Deployment Diagram</h2>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1>Environments</h1>
+						<div style="margin: auto; width: 70%;">
+							<img src="https://github.com/MARS-Technion/ros_alate/raw/main/doc/images/component_adapter.svg" style="width:100%" alt="ros_alate Deployment Diagram">
+						</div>
 					</section>
 					<section>
-						<h2>CI/CD & TDD</h2>
+						<h2>CI/CD Environments</h2>
+						<p>Plan your workflows:</p>
+						<ul>
+							<li class="fragment fade-in">Play in Sandboxes.</li>
+							<li class="fragment fade-in">Automate testing with event triggers in Staging.</li>
+							<li class="fragment fade-in">Have a well thought-through plan for committing to Production.</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -184,12 +225,16 @@
 					</section>
 					<section>
 						<h2>POC recognition</h2>
-					</section>
-					<section>
-						<h2>Populate the backlog</h2>
+						<p>Risk = (Potential Negative Impact) x Likelihood</p>
+						<p class="fragment fade-in">Reduction of impact or likelihood will mitigate the risk.</p>
+						<p class="fragment fade-in">The POC is a demonstration of feasibility of the HLD, showing that the riskiest items (after mitigation) are manageable.</p>
 					</section>
 				</section>
 				<section>
+					<section>
+						<h1>Go forth</h1>
+						<h2>and populate the backlog</h2>
+					</section>
 					<section>
 						<h2>Useful Resources</h2>
 						<ul>
