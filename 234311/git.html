@@ -12,11 +12,14 @@
 
 		<link rel="stylesheet" href="../revealJS/dist/reset.css">
 		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
-		<link rel="stylesheet" href="../revealJS/dist/theme/white.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/simple.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
 		
+		<!-- custom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../css/cs_presentation.css">
 
 		<!-- Enable Mathjax -->		
 		<script type="text/x-mathjax-config">
@@ -29,17 +32,28 @@
 	<body>
 		<div class="reveal">
 			<div class="slides" style="text-align: left;">
-				<section data-background="../images/title.png">
-					<div style="position: absolute; width: 80%; left: -40px; top: 0px;">
-						<h1 style="color:white;">Git is</h1>
-						<h1 style="color:white;">Great!</h1>
-						<h4 style="color:#d39f10;">the bare minimum</h4>
-						<p style="color:#d39f10;">David Dovrat, October 2022</p>
+				<section data-background-color="white" style="padding:0;">
+					<div class="cs-presentation-title">
+						<div class="cs-presentation-title-trapezoid"></div>
+						<div style="padding-top:10%;">
+							<h1>Git is Great!</h1>
+							<h2 style="background-color: #d39f10; color: white;">the bare minimum</h2>
+						</div>
 					</div>
+					<div class= "cs-presentation-footer" style= "padding-left: 50px">
+						<div class="cs-presentation-footer-logo">
+							<p style="color:#d39f10; ">David Dovrat, October 2022</p>
+						</div>
+						<div class="cs-presentation-footer-logo">
+							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+						</div>
+					<div>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
-						<h1 style="color:#002047">Objectives</h1>
+						<div>
+							<h1>Objectives</h1>
+						</div>
 					</section>
 					<section>
 						<h2 style="color:#002047">Objectives</h2>
@@ -59,7 +73,7 @@
 						</ul>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
 						<h1 style="color:#002047">Why should we like Git?</h1>
 					</section>
@@ -78,7 +92,7 @@
 						</ul>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
 						<h1 style="color:#002047;">How should we use Git?</h1>
 					</section>
@@ -128,7 +142,7 @@
 						</table>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
 						<h1 style="color:#002047;">
 							Git - GitLab - Github - Hurray!
@@ -167,10 +181,10 @@
 					</section>
 				</section>
 				<section>
-					<section data-background="../images/body.svg">
+					<section>
 						<h1 style="color:#002047">The Takeaway</h1>
 					</section>
-					<section data-background="../images/body.svg">
+					<section>
 						<h2 style="color:#002047">The Takeaway</h2>
 						<ul>
 							<li class="fragment fade-in-then-semi-out">
@@ -188,7 +202,7 @@
 						</ul>
 					</section>
 				</section>
-				<section data-background="../images/body.svg">
+				<section>
 					<section>
 						<h1 style="color:#002047">Useful Resources</h1>
 					</section>
@@ -220,6 +234,13 @@
 					</section>
 				</section>
 			</div>
+
+			<div class="cs-presentation-footer">
+				<div class="cs-presentation-footer-trapezoid"></div>
+				<div class="cs-presentation-footer-logo">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+				</div>
+			</div>
 		</div>
 
 		<script src="../revealJS/dist/reveal.js"></script>
@@ -233,9 +254,9 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				disableLayout: true,
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealZoom,  RevealHighlight, RevealNotes ]
+				plugins: [RevealZoom]
 			});
 			
 			Reveal.configure({	backgroundTransition: 'concave',
