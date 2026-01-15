@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="he">
+	<head>
+		<title>234311</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="David Dovrat" >
+		<meta name="description" content="Yearly Project in Software Engineering">
+		<link rel="shortcut icon" href="../../logo.ico"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style>
+			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+			.w3-sidebar {
+				z-index: 3;
+				width: 250px;
+				top: 43px;
+				bottom: 0;
+				height: inherit;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- Navbar -->
+		<div class="w3-top">
+			<div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+				<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+				<a href="../index.html" class="w3-bar-item w3-button w3-theme-l1">234311</a>
+				<a href="../values.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ערכים</a>
+				<a href="../staff.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">צוות הקורס</a>
+				<!--a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">שותפים</a-->
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+				<i class="fa fa-remove"></i>
+			</a>
+			<h4 class="w3-bar-item"><a class="w3-bar-item w3-button w3-hover-black" href="haifa0.html"><b>פרוייקטים</b></a></h4>
+		</nav>
+
+		<!-- Overlay effect when opening sidebar on small screens -->
+		<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+		<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+		<div class="w3-main" style="margin-left:250px; direction:rtl;">
+			<div class="w3-row w3-padding-64">
+				<!-- Article -->
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">
+					שנה"ל תשפ"ו - רטרוספקטיבה
+					</h1>
+					<h2 class="w3-text-teal">
+						סמסטר א'
+					</h2>
+					<h3 class="w3-text-teal">
+						לקחים:
+					</h3>
+					<ul style="font-size:18px;">
+						<li>
+							<em>The rule of two:</em>
+							הממשק של הצוות הוא עם שתי נקודות ממשק ושתיים בלבד - משתמש הקצה (או מי שמוסמך לייצג אותו) ואחראי הטמעה טכנית.
+							אם ארגון מציב לפניכם יותר מנציג אחד מכל סוג, לבקש מהם להחליט מי הוא הקובע מולכם. אם הם לא מחליטים - תחליטו בשבילם (תבחרו אחד מכל סוג) ותיידעו את המנחה. אל תהיו צד בקונפליקט פנימי של ארגון זר לכם.
+							אם ארגון מציב בפניכם יותר משני הסוגים הנ"ל, לדבר רק עם משתמש הקצה ואחראי ההטמעה, ואת יתר הגורמים להפנות למנחה - לא לדבר איתם ישירות.
+							צוות הקורס יסייע במידה ואין שני נציגים שמשתפים פעולה יפה עם הצוות, יש להפנות את תשומת לב הסגל כאשר אחד משתי נקודות הממשק מפסיק לשתף פעולה.
+						</li>
+						<li>
+MVP
+מוקדם מזרז את המעורבות של הצד הטכני של הלקוח. השיח עם הלקוח נהיה מאד ענייני כאשר כולם משתמשים כבר במערכת.
+						</li>
+						<li>
+להשתמש ב placeholders \ stubs עד שיש את הדבר האמיתי, למשל חניות נכים משתמשים ב google maps כ- placeholder עד שיקבלו את הממשק למפות של העירייה.
+						</li>
+						<li>
+אם יש לקוח שמעכב את הפיתוח בגלל החלטה שהוא לא מקבל - לקבל את ההחלטה במקומו ולשאול אם זה טוב אחרי שזה ממומש. אם לקוח מעכב את ההטמעה - לעשות self hosting וליידע את סגל הקורס (self-hosting זה טוב כפתרון זמני, סגל הקורס יאכוף את הזמניות של הפתרון).
+						</li>
+						<li>
+אפיון סגור של מערכת - כלומר מערכת שנקודת הפתיחה שלה היא יחסית בשלה וכל החלטות התכן כבר התקבלו בה - איננו מצב התחלה טוב לפרוייקט שלנו כי חלק גדול מהקורס זה תכן. על סגל הקורס להימנע מלקבל פרוייקטים של תכנות בלבד לפי מפת-דרכים שכבר תוכננה.
+						</li>
+						<li>
+להחתים את הלקוח על ה HLD - לגלות בשלב ה MVP שיש אילוצים שהיו ידועים ללקוח אך לא פורטו, כאשר התוכנית הייתה ידועה ללקוח בשלב ה HLD אך הוא מתכחש אליה רטרואקטיבית, זה לא נעים. לא חשוב שמות.
+						</li>
+						<li>
+							<em>הגאון המקומי:</em>
+							אם יש לכם בארגון מישהו שרק הוא יודע ורק הוא יכול, תפטרו אותו ותתמודדו, עכשיו ולא אחר כך.
+						</li>
+						<li>
+							<em>לתת לטבע לעשות את שלו?</em>
+							אם הלקוח מתעקש, אבל ממש מתעקש, להכשיל את הפרוייקט בגלל החלטות לא הגיוניות - ידעו את הסגל. נמצא איך לתת ללקוח לפגוע בעצמו בלי לפגוע בכם.
+						</li>
+						<li>
+אתם הולכים להיות מהנדסי תוכנה מדופלמים עוד פחות משנה מהיום, אל תיגשו לפיתוח מערכת תוכנה בצורה נאיבית - תבצעו תכן! בשביל זה היו כל הקורסים על מת"מ, את"מ, תכנות מונחה עצמים ושכמותיהם. אין שום צורך להמציא מחדש את ה Interface.
+						</li>
+						<li>
+							<em>Hate the game don't hate the player:</em>
+אם אתם מפתחים מערכת עם אופי שיווקי \ מסחרי - תוציאו "אנליטיקס" במידת האפשר. אם יש תהליך הרשמה באיזשהו שלב במערכת שלכם - קחו ותרשמו את הפרטים של הלקוח הפוטנציאלי כמה שיותר גבוה במשפך. סוף המשפך הוא בביצוע תשלום - תעשו כל מה שאתם יכולים כדי להביא לשם את הלקוח, ותלמדו כמה שאתם יכולים על מי שעצר לפני ביצוע התשלום ולא השלים את כל המשפך. בשביל זה צריך לדעת מי הוא כמה שיותר מוקדם \ גבוה במשפך. כן זה מבחיל אבל אנשים צריכים להתפרנס.
+						</li>
+						<li>
+תחתית הבקלוג סופגת כל רעש. לקוח שמבקש שטויות, ומשנה את דעתו תדיר, יקבל תיעדוף של תחתית הבקלוג. מה שיבשיל יבעבע למעלה בסופו של דבר, והרעש ישאר למטה. הלקוח תמיד צודק כשזה נוגע לתחום מומחיותו. בתחום מומחיותכם אתם כנראה יודעים יותר טוב, אחרת לא היה צריך אתכם.
+						</li>
+					</ul>
+				</div>
+				<!-- Figures -->
+				<div class="w3-third w3-container">
+					<p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmVmdW9ueWU0NmtwZHNwazFlczVlMHZ4aHdtcWVmcHVmMXM2czRscSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h36vh423PiV9K/giphy.gif" style="width:100%" alt="Retrospection">
+					</p>
+				</div>
+			</div>
+
+		<footer id="myFooter" style="text-align:center;">
+			<div class="w3-container w3-theme-l2 w3-padding-32">
+				<a href="https://www.cs.technion.ac.il/">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Neg.png" style="width:50%" alt="CS@Technion">
+				</a>
+			</div>
+
+			<div class="w3-container w3-theme-l1">
+				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+			</div>
+		</footer>
+
+		<!-- END MAIN -->
+		</div>
+
+		<script>
+			// Get the Sidebar
+			var mySidebar = document.getElementById("mySidebar");
+
+			// Get the DIV with overlay effect
+			var overlayBg = document.getElementById("myOverlay");
+
+			// Toggle between showing and hiding the sidebar, and add overlay effect
+			function w3_open() {
+				if (mySidebar.style.display === 'block') {
+					mySidebar.style.display = 'none';
+					overlayBg.style.display = "none";
+				} else {
+					mySidebar.style.display = 'block';
+					overlayBg.style.display = "block";
+				}
+			}
+
+			// Close the sidebar with the close button
+			function w3_close() {
+				mySidebar.style.display = "none";
+				overlayBg.style.display = "none";
+			}
+		</script>
+
+	</body>
+	</html>
