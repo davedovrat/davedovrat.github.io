@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="David Dovrat">
+		<meta name="description" content="A presentation about control theory, for kids.">
+
+		<title>מבוא למבוא לבקרה</title>
+		<link rel="shortcut icon" href="https://davedovrat.github.io/logo.ico"/>
+
+		<link rel="stylesheet" href="../../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../../revealJS/dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../revealJS/plugin/highlight/monokai.css">
+
+		<!-- custom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../../css/cs_presentation.css">
+		
+		<!-- Enable Mathjax -->		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal" dir="rtl">
+			<div class="slides" style="text-align: right;">
+				<section data-background-color="white" style="text-align: left; padding:0;">
+					<div class="cs-presentation-title">
+						<div style="padding-top:10%;">
+							<h1>נושאים נבחרים</h1>
+							<h1>ברובוטיקה</h1>
+							<h4 style="background-color: #d39f10; color: white;">מבוא למבוא לבקרה</h4>
+						</div>
+						<div class="cs-presentation-title-trapezoid"></div>
+					</div>
+					<div class= "cs-presentation-footer" style= "padding-left: 50px">
+						<div class="cs-presentation-footer-logo">
+							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+						</div>
+						<div class="cs-presentation-footer-logo">
+							<p style="color:#d39f10; ">ד"ר דוד דברת, שבט התשפ"ו</p>
+						</div>
+					<div>
+				</section>
+				<section>
+					<section data-background-iframe="../../nlogo/pid_game.html" data-background-interactive></section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../revealJS/dist/reveal.js"></script>
+		<script src="../../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../../revealJS/plugin/notes/notes.js"></script>
+		<script src="../../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				rtl: true,
+				controlsLayout: 'edges',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealZoom]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>
