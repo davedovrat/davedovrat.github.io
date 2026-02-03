@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
 		<meta name="author" content="David Dovrat">
 		<meta name="description" content="A presentation about control theory, for kids.">
@@ -25,33 +25,114 @@
 		<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 		</script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		</script>
 		
 	</head>
 	<body>
 		<div class="reveal" dir="rtl">
-			<div class="slides" style="text-align: right;">
-				<section data-background-color="white" style="text-align: left; padding:0;">
-					<div class="cs-presentation-title">
-						<div style="padding-top:10%;">
-							<h1>נושאים נבחרים</h1>
-							<h1>ברובוטיקה</h1>
-							<h4 style="background-color: #d39f10; color: white;">מבוא למבוא לבקרה</h4>
-						</div>
-						<div class="cs-presentation-title-trapezoid"></div>
-					</div>
-					<div class= "cs-presentation-footer" style= "padding-left: 50px">
-						<div class="cs-presentation-footer-logo">
-							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
-						</div>
-						<div class="cs-presentation-footer-logo">
-							<p style="color:#d39f10; ">ד"ר דוד דברת, שבט התשפ"ו</p>
-						</div>
-					<div>
-				</section>
+			<div class="slides" style="text-align:right;">
 				<section>
+					<section data-background-color="white" style="text-align:left; padding:0;">
+						<div class="cs-presentation-title">
+							<div style="padding-top:10%;">
+								<h1>נושאים נבחרים</h1>
+								<h1>ברובוטיקה</h1>
+								<h4 style="background-color: #d39f10; color: white;">מבוא למבוא לבקרה</h4>
+							</div>
+							<div class="cs-presentation-title-trapezoid"></div>
+						</div>
+						<div class= "cs-presentation-footer" style= "padding-left: 50px">
+							<div class="cs-presentation-footer-logo">
+								<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+							</div>
+							<div class="cs-presentation-footer-logo">
+								<p style="color:#d39f10; ">ד"ר דוד דברת, שבט התשפ"ו</p>
+							</div>
+						<div>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>מוטיבציה</h1>
+					</section>
+					<section>
+						<h2>אנחנו נלמד על:</h2>
+						<p style="margin-top:5%;">
+							<ul>
+								<li class="fragment fade-in-then-semi-out">מערכות דינמיות</li>
+								<li class="fragment fade-in-then-semi-out">מידול מתימטי של מערכות דינמיות</li>
+								<li class="fragment fade-in-then-semi-out">פונקציית תמסורת ותגובה להלם</li>
+								<li class="fragment fade-in-then-semi-out">בקר פשוט אך שימושי</li>
+							</ul>
+						<p>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>מערכות דינמיות</h1>
+					</section>
+					<section data-background-iframe="https://he.wikipedia.org/wiki/%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA" data-background-interactive></section>
+					<section data-background-iframe="https://he.wikipedia.org/wiki/%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA_(%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%90%D7%95%D7%AA%D7%95%D7%AA)" data-background-interactive></section>
+					<section data-background-iframe="https://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%91%D7%A7%D7%A8%D7%94" data-background-interactive></section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>מידול מתימטי</h1>
+						<h1>של מערכות דינמיות</h1>
+					</section>
+					<section>
+						<h2>הכלים העומדים לרשותנו:</h2>
+						<p style="margin-top:5%;">
+							<ul style="text-align:center; width:100%;">
+								<li class="fragment fade-in-then-semi-out">
+									<p style="text-align:right;" >
+										החוק השני של ניוטון: $$F = ma$$
+									</p>
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									<p style="text-align:right;" >
+										התמרת לפלס:
+										$$
+											\mathcal{L}\left[{u\left({t}\right)}\right]
+											=
+											\int_{0^+}^\infty u\left({t}\right) e^{-st}dt
+											=
+											U\left({s}\right)
+										$$
+									</p>
+								</li>
+							</ul>
+						<p>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>פונקציית תמסורת</h1>
+						<h1>ותגובה להלם</h1>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>בקר פשוט אך שימושי</h1>
+					</section>
 					<section data-background-iframe="../../nlogo/pid_game.html" data-background-interactive></section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>קריאה נוספת</h1>
+					</section>
+					<section>
+						<h2>לקריאה נוספת:</h2>
+						<p style="margin-top:5%;">
+							<ul>
+								<li>סר אייזיק ניוטון</li>
+								<li>פייר-סימון לפלס</li>
+								<li>אוליבר הביסייד</li>
+								<li>הנדריק וייד בודה</li>
+							</ul>
+						<p>
+					</section>
 				</section>
 			</div>
 		</div>
