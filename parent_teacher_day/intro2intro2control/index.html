@@ -58,12 +58,19 @@
 					</section>
 					<section>
 						<h2>אנחנו נלמד על:</h2>
-						<p style="margin-top:5%;">
+						<p>
 							<ul>
-								<li class="fragment fade-in-then-semi-out">מערכות דינמיות</li>
-								<li class="fragment fade-in-then-semi-out">מידול מתימטי של מערכות דינמיות</li>
-								<li class="fragment fade-in-then-semi-out">פונקציית תמסורת ותגובה להלם</li>
-								<li class="fragment fade-in-then-semi-out">בקר פשוט אך שימושי</li>
+								<li class="fragment fade-in-then-semi-out">מערכות דינמיות.</li>
+								<li class="fragment fade-in-then-semi-out">מידול מתימטי של מערכות דינמיות.</li>
+								<li class="fragment fade-in-then-semi-out">פונקציית תמסורת ותגובה להלם.</li>
+								<li class="fragment fade-in-then-semi-out">בקר פשוט אך שימושי.</li>
+							</ul>
+						<p>
+						<h2 class="fragment fade-in-then-semi-out">על מנת:</h2>
+						<p>
+							<ul>
+								<li class="fragment fade-in-then-semi-out">להבין איך מערכות אוטונומיות "עושות דברים בעצמן".</li>
+								<li class="fragment fade-in-then-semi-out">לראות שזה רק נראה מסובך, אבל העקרונות הם די פשוטים.</li>
 							</ul>
 						<p>
 					</section>
@@ -83,10 +90,10 @@
 					</section>
 					<section>
 						<h2>הכלים העומדים לרשותנו:</h2>
-						<p style="margin-top:5%;">
-							<ul style="text-align:center; width:100%;">
+						<div>
+							<ul class="r-fit-text" style="width:100%;">
 								<li class="fragment fade-in-then-semi-out">
-									<p style="text-align:right;" >
+									<p style="text-align:right;">
 										החוק השני של ניוטון: $$F = ma$$
 									</p>
 								</li>
@@ -95,15 +102,93 @@
 										התמרת לפלס:
 										$$
 											\mathcal{L}\left[{u\left({t}\right)}\right]
-											=
+											\equiv
 											\int_{0^+}^\infty u\left({t}\right) e^{-st}dt
 											=
 											U\left({s}\right)
 										$$
 									</p>
 								</li>
+								<li class="fragment fade-in-then-semi-out">
+									<p style="text-align:right;" >
+										התמרת לפלס הפוכה:
+										$$
+											\mathcal{L}^{-1}\left[{U\left({s}\right)}\right]
+											\equiv
+											\frac{1}{2 \pi j}
+											\int_{c + j \infty}^{c - j\infty} U\left({s}\right) e^{st}ds
+											=
+											u\left({t}\right)
+										$$
+									</p>
+								</li>
 							</ul>
-						<p>
+						</div>
+					</section>
+					<section data-transition="convex-in none-out">
+						<h2>לדוגמא:</h2>
+							<p style="text-align:right;" >
+								ננסה לשלוט במעוף רחפן:
+								$$
+								F = ma
+								$$
+								$$\Downarrow$$
+								$$
+								u(t) - mg = m\ddot{y}(t)
+								$$
+							</p>
+					</section>
+					<section data-transition="none">
+						<h2>לדוגמא:</h2>
+							<p style="text-align:right;" >
+								ננסה לשלוט במעוף רחפן:
+								$$
+								u(t) - mg = m\ddot{y}(t)
+								$$
+								$$\Downarrow$$
+								$$
+								\mathcal{L}\left[{\ddot{y}(t)}\right] = \mathcal{L}\left[{\dfrac{u(t)}{m} - g}\right]
+								$$
+							</p>
+					</section>
+					<section data-transition="none">
+						<h2>לדוגמא:</h2>
+							<p style="text-align:right;" >
+								ננסה לשלוט במעוף רחפן:
+								$$
+								\mathcal{L}\left[{\ddot{y}(t)}\right] = \mathcal{L}\left[{\dfrac{u(t)}{m} - g}\right]
+								$$
+								$$\Downarrow$$
+								$$
+								s^2Y(s)- \dot{y}(0)  - sy(0) = \dfrac{1}{m}U(s) - \dfrac{g}{s}
+								$$
+							</p>
+					</section>
+					<section data-transition="none-in convex-out">
+						<h2>לדוגמא:</h2>
+							<p style="text-align:right;" >
+								ננסה לשלוט במעוף רחפן:
+								$$
+								s^2Y(s)- \dot{y}(0)  - sy(0) = \dfrac{1}{m}U(s) - \dfrac{g}{s}
+								$$
+								$$\Downarrow$$
+								$$
+								Y(s) =  \dfrac{1}{ms^2}U(s) + \dfrac{1}{s^2}\dot{y}(0) + \dfrac{1}{s} y(0) - \dfrac{g}{s^3}
+								$$
+							</p>
+					</section>
+					<section>
+						<h2>מסקנה:</h2>
+							<p style="text-align:right;" >
+								התנועה של הרחפן תלויה בכח שאנחנו מפעילים עליו (אבל לא רק):
+								$$
+								y(t) =  \mathcal{L}^-1\left[{\dfrac{1}{ms^2}U(s)}\right] + \dot{y}(0)t + y(0) - \dfrac{1}{2}gt^2
+								$$
+								מפתיע נכון?
+							</p>
+							<p class="fragment fade-in">
+							ובכלל, איזה כח (או אות) אנחנו רוצים להפעיל, ולמה?
+							</p>
 					</section>
 				</section>
 				<section style="padding-right:5%;">
@@ -111,11 +196,66 @@
 						<h1>פונקציית תמסורת</h1>
 						<h1>ותגובה להלם</h1>
 					</section>
+					<section data-transition="none-out convex-in">
+						<h2>פונקציית תמסורת:</h2>
+							<p style="text-align:right;" >
+								נגדיר את היחס בין אות היציאה לאות הכניסה כפונקציית תמסורת:
+								$$
+								H(s) = \dfrac{Y(s)}{U(s)}
+								$$
+								$$\Downarrow$$
+								$$
+								Y(s) = H(s)U(s)
+								$$
+							</p>
+					</section>
+					<section data-transition="none-in convex-out">
+						<h2>פונקציית תמסורת:</h2>
+							<p style="text-align:right;" >
+								$$
+								Y(s) = H(s)U(s)
+								$$
+								נניח שהכניסה היא $U(s) = 1$ (הלם), נקבל
+								$$
+								Y(s) = 1 \cdot H(s) = H(s)
+								$$
+								כלומר, אם הכניסה היא כניסת הלם, אז היציאה $\left(Y\right)$ היא התגובה להלם $\left(H\right)$.
+							</p>
+							<p>
+							מכאן שהתמסורת היא תכונה מאפיינת של המערכת.
+							</p>
+					</section>
+					<section data-transition="none-out convex-in">
+						<h2>בדוגמא שלנו:</h2>
+							<p style="text-align:right;" >
+								$$
+								s^2Y(s)- \dot{y}(0)  - sy(0) = \dfrac{1}{m}U(s) - \dfrac{g}{s}
+								$$
+								נתעלם (בינתיים) מכל האיברים שאינם קשורים לאות הכניסה או היציאה ונקבל:
+								$$
+								s^2Y(s) = \dfrac{1}{m}U(s)
+								$$
+								$$\Downarrow$$
+								$$
+								H(s) = \dfrac{Y(s)}{U(s)} = \dfrac{1}{ms^2}
+								$$
+							</p>
+					</section>
+					<section data-transition="none-in convex-out">
+						<h2>בדוגמא שלנו:</h2>
+							<p style="text-align:right;" >
+								$$
+								H(s) = \dfrac{1}{ms^2}
+								$$
+								יש לנו שני קטבים באפס - המערכת לא יציבה! אוי לא!
+							</p>
+					</section>
 				</section>
 				<section style="padding-right:5%;">
 					<section>
 						<h1>בקר פשוט אך שימושי</h1>
 					</section>
+					<section data-background-iframe="https://he.wikipedia.org/wiki/%D7%91%D7%A7%D7%A8_PID" data-background-interactive></section>
 					<section data-background-iframe="../../nlogo/pid_game.html" data-background-interactive></section>
 				</section>
 				<section style="padding-right:5%;">
@@ -126,10 +266,10 @@
 						<h2>לקריאה נוספת:</h2>
 						<p style="margin-top:5%;">
 							<ul>
-								<li>סר אייזיק ניוטון</li>
-								<li>פייר-סימון לפלס</li>
-								<li>אוליבר הביסייד</li>
-								<li>הנדריק וייד בודה</li>
+								<li><a href="https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%99%D7%96%D7%A7_%D7%A0%D7%99%D7%95%D7%98%D7%95%D7%9F">סר אייזיק ניוטון</a></li>
+								<li><a href="https://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%99%D7%A8-%D7%A1%D7%99%D7%9E%D7%95%D7%9F_%D7%9C%D7%A4%D7%9C%D7%A1">פייר-סימון לפלס</a></li>
+								<li><a href="https://he.wikipedia.org/wiki/%D7%90%D7%95%D7%9C%D7%99%D7%91%D7%A8_%D7%94%D7%91%D7%99%D7%A1%D7%99%D7%99%D7%93">אוליבר הביסייד</a></li>
+								<li><a href="https://en.wikipedia.org/wiki/Hendrik_Wade_Bode">הנדריק וייד בודה</a></li>
 							</ul>
 						<p>
 					</section>
