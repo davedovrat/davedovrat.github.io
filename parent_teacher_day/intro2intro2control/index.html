@@ -243,12 +243,31 @@
 					</section>
 					<section data-transition="none-in convex-out">
 						<h2>בדוגמא שלנו:</h2>
-							<p style="text-align:right;" >
-								$$
-								H(s) = \dfrac{1}{ms^2}
-								$$
-								יש לנו שני קטבים באפס - המערכת לא יציבה! אוי לא!
-							</p>
+						<p style="text-align:right;" >
+							$$
+							H(s) = \dfrac{1}{ms^2}
+							$$
+							יש לנו שני קטבים באפס - המערכת לא יציבה! אוי לא!
+							$$
+							\mathcal{L}^-1\left[{H(s)}\right] = \mathcal{L}^-1\left[{\dfrac{1}{ms^2}}\right] = \dfrac{t}{m}
+							$$
+						</p>
+						<p style="text-align:right; margin-left:30%" >
+
+							המערכת שלנו, בתגובה להפרעה קטנה כגדולה, הולכת וגדלה עם הזמן - כלומר מתבדרת.								
+						</p>
+					</section>
+					<section>
+						<h2>אז מה עושים?</h2>
+						<p>
+						מאלצים יציבות על ידי הוספת בקר, שמפעיל אות מייצב. 
+						</p>
+						<p>
+						האות הזה יכול להפעיל מנוע שמפעיל כח, למשל.
+						</p>
+						<p style="text-align:right; margin-left:30%" >
+						האות הזה יכול להיות אות של שלט שמפעיל מנוע שכבר קיים במערכת שאנחנו מבקרים (כמו ברחפן שבדוגמא שלנו).
+						</p>
 					</section>
 				</section>
 				<section style="padding-right:5%;">
@@ -256,6 +275,25 @@
 						<h1>בקר פשוט אך שימושי</h1>
 					</section>
 					<section data-background-iframe="https://he.wikipedia.org/wiki/%D7%91%D7%A7%D7%A8_PID" data-background-interactive></section>
+					<section data-transition="none-in convex-out">
+						<h2>בדוגמא שלנו:</h2>
+						<p style="text-align:right;" >
+							$$
+							\left\lbrace{
+							\begin{array}{l}
+							H(s) = \dfrac{1}{ms^2} \\
+							C(s) = \kappa_p + \dfrac{\kappa_i}{s} + \kappa_d s
+							\end{array}
+							}\right.
+							\Rightarrow
+							\dfrac{CH}{1+CH} = 
+							$$
+						</p>
+						<p style="text-align:right; margin-left:30%" >
+
+							ועכשיו אנחנו יכולים להזיז את הקטבים בפונקציית התמסורת של המערכת עם המשוב, ובכך להשפיע על התגובה של המערכת לקלט, כלומר לייצב אותה! 								
+						</p>
+					</section>
 					<section data-background-iframe="../../nlogo/pid_game.html" data-background-interactive></section>
 				</section>
 				<section style="padding-right:5%;">
@@ -264,14 +302,21 @@
 					</section>
 					<section>
 						<h2>לקריאה נוספת:</h2>
-						<p style="margin-top:5%;">
+						<p>
 							<ul>
 								<li><a href="https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%99%D7%96%D7%A7_%D7%A0%D7%99%D7%95%D7%98%D7%95%D7%9F">סר אייזיק ניוטון</a></li>
 								<li><a href="https://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%99%D7%A8-%D7%A1%D7%99%D7%9E%D7%95%D7%9F_%D7%9C%D7%A4%D7%9C%D7%A1">פייר-סימון לפלס</a></li>
 								<li><a href="https://he.wikipedia.org/wiki/%D7%90%D7%95%D7%9C%D7%99%D7%91%D7%A8_%D7%94%D7%91%D7%99%D7%A1%D7%99%D7%99%D7%93">אוליבר הביסייד</a></li>
 								<li><a href="https://en.wikipedia.org/wiki/Hendrik_Wade_Bode">הנדריק וייד בודה</a></li>
 							</ul>
+						</p>
+						<h2>ביבליוגרפיה:</h2>
 						<p>
+							<ul style="text-align:left; margin-left:auto;"  dir="ltr">
+								<li><a href="https://www.wiley.com/Elementary+Differential+Equations%2C+Enhanced+eText%2C+11th+Edition-p-9781119320630">Elementary Differential Equations, 11th Edition</a></li>
+								<li><a href="https://www.mheducation.com/highered/mhp/product/schaums-outline-feedback-control-systems-3rd-edition?pd=search&viewOption=student">Schaum’s Outline of Feedback and Control Systems, 3rd Edition</a></li>
+							</ul>
+						</p>
 					</section>
 				</section>
 			</div>
