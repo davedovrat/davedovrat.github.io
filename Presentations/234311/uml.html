@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="David" >
+		<meta name="description" content="Design Patterns">
+
+		<title>Design Patterns</title>
+
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+		
+		<!-- custom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../css/cs_presentation.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section data-background-color="white" style="padding:0;">
+					<div class="cs-presentation-title">
+						<div class="cs-presentation-title-trapezoid"></div>
+						<div style="padding-top:10%;">
+							<h1>UML</h1>
+							<h2 style="background-color: #d39f10; color: white;">So you want to be a Software Engineer</h2>
+						</div>
+					</div>
+					<div class= "cs-presentation-footer" style= "padding-left: 50px">
+						<div class="cs-presentation-footer-logo">
+							<p style="color:#d39f10; ">David Dovrat, April 2026</p>
+						</div>
+						<div class="cs-presentation-footer-logo">
+							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+						</div>
+					<div>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>Objectives</h1>
+						</div>
+					</section>
+					<section>
+						<div>
+							<h2>We will:</h2>
+							<ul>
+								<li class="fragment fade-in-then-semi-out">
+									Learn what UML <em>is</em>.
+								</li>
+								<li class="fragment fade-in-then-semi-out">
+									Learn what UML <em>does</em>.
+								</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>A <br> Unified <br> Modeling <br> Language</h1>
+						</div>
+					</section>
+					<section>
+						<div>
+							<h2>A Unified Modeling Language</h2>
+							<dl>
+								<dt>Unified</dt>
+									<dd class="fragment fade-in-then-semi-out">Like the Tower of Babel just backwards</dd>
+								<dt>Modeling</dt>
+									<dd class="fragment fade-in-then-semi-out">As in an ideal abstraction, like miniature planes</dd>
+								<dt>Language</dt>
+									<dd class="fragment fade-in-then-semi-out">To express yourself and communicate with others</dd>
+							</dl>
+						</div>
+					</section>
+					<section data-background-iframe="https://www.omg.org/uml/why-uml-is-important.htm" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; padding-left:10%; background-color:#00174277;">
+							<h2>UML is a meta-model</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://www.omg.org/spec/UML/" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; padding-left:10%; background-color:#00174277;">
+								<h2>XMI = XML Metadata Interchange<h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://www.omg.org/spec/XMI/" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; padding-left:10%; background-color:#00174277;">
+								<h2>XSD = XML Schema Definition<h2>
+						</div>
+					</section>
+					<section>
+						<h2>In other words</h2>
+						<div style="margin:5%; padding-right:10%; padding-top:3%">
+							<p class="fragment fade-in">UML is a language specification used to define models, <span class="fragment fade-in">including meta-models.</span></p>
+							<p class="fragment fade-in">UML models can be shared between applications by machine readable xmi,
+							<span class="fragment fade-in">which can be validated by an xsd.</span></p>
+							<h2 class="fragment fade-in">UML is a UML in UML</h2>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>Structural UML</h1>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Class_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Component_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Composite_structure_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Deployment_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Object_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Package_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Profile_diagram" data-background-interactive></section>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>Behavioral UML</h1>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Use_case_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Activity_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Communication_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Interaction_overview_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Sequence_diagram" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/UML_state_machine" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/UML_state_machine" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/UML_state_machine" data-background-interactive></section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Timing_diagram_(Unified_Modeling_Language)" data-background-interactive></section>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>UML in the wild</h1>
+						</div>
+					</section>
+					<section data-background-iframe="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.719496/full" data-background-interactive></section>
+				</section>
+				<section>
+					<section>
+						<h1>Conclusion</h1>
+					</section>
+					<section>
+						<h2>The Takeaway</h2>
+						<ul style="padding-right:10%;">
+							<li class="fragment fade-in-then-semi-out">
+								UML is useful for planning and communicating your ideas in a precise, formal, way.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								If you thoroughly understand the rules, you know how to bend them safely.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								If I'd discard any tool that gets <a href="https://www.reddit.com/r/Python/comments/165dpya/is_uml_still_a_thing/">online hate</a> I'd be left with no tools at all.
+							</li>
+							<li class="fragment fade-in-then-semi-out">
+								It might be my generational bias, but I think that <a href="https://www.merriam-webster.com/wordplay/meta-adjective-self-referential">being meta</a> is cool (it was before corporations ruined everything).
+							</li>
+						</ul>
+						<img  class="fragment fade-in" src="https://imgs.xkcd.com/comics/hofstadter.png" alt="https://xkcd.com/917">
+					</section>
+					<section>
+						<h2>Useful Resources</h2>
+						<ul>
+							<li>
+								<a href="https://www.omg.org/uml/">The Object Management Group Official UML Specification</a>
+							</li>
+							<li>
+								<a href="https://eclipse.dev/emf/">Eclipse Modeling Framework</a>
+							</li>
+							<li>
+								<a href="https://github.com/ogheorghies/MetaUML">MetaUML</a>
+							</li>
+							<li>
+								<a href="https://hub.docker.com/r/davidovrat/metapost">My MetaPost docker container</a>
+							</li>
+							<li>
+								<a href="https://docs.mermaidchart.com/mermaid-oss/syntax/examples.html">Mermaid Chart</a>
+							</li>
+							<li>
+								<a href="https://umlet.com">UMLet</a>
+							</li>
+							<li>
+								<a href="https://uml.sourceforge.io/">Umbrello</a>
+							</li>
+							<li>
+								<a href="https://plantuml.com/">PlantUML</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Further Inquiry</h2>
+						<ul>
+							<li>
+								"So you want to be a writer" by Charles Bukowski.
+							</li>
+							<li>
+								"So you want to be a rock & roll star" by The Byrds (I also like the Pearl Jam cover).
+							</li>
+							<li>
+								"So you want to be a hero" by Lori & Corey Cole, Sierra On-Line.
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+
+			<div class="cs-presentation-footer">
+				<div class="cs-presentation-footer-trapezoid"></div>
+				<div class="cs-presentation-footer-logo">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+				</div>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealZoom]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>
