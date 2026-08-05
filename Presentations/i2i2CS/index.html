@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+		<meta name="author" content="David Dovrat">
+		<meta name="description" content="A presentation about computer science, for kids.">
+
+		<title>מדעי המחשב</title>
+		<link rel="shortcut icon" href="https://davedovrat.github.io/logo.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+
+		<!-- custom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../css/cs_presentation.css">
+		
+		<!-- Enable Mathjax -->		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal" dir="rtl">
+			<div class="slides" style="text-align:right;">
+				<section>
+					<section data-background-color="white" style="text-align:left; padding:0;">
+						<div class="cs-presentation-title">
+							<div style="padding-top:40%;">
+								<h1>מדעי המחשב</h1>
+								<h4 style="background-color: #d39f10; color: white;">הנדסה-מדע-אומנות</h4>
+							</div>
+							<div class="cs-presentation-title-trapezoid"></div>
+						</div>
+						<div class= "cs-presentation-footer" style= "padding-left: 50px">
+							<div class="cs-presentation-footer-logo">
+								<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+							</div>
+							<div class="cs-presentation-footer-logo">
+								<p style="color:#d39f10; ">ד"ר דוד דברת, אב התשפ"ו</p>
+							</div>
+						<div>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>מוטיבציה</h1>
+					</section>
+					<section>
+						<h2>אנחנו נלמד על:</h2>
+						<p>
+							<ul>
+								<li class="fragment fade-in-then-semi-out">מכשירי חישוב במרוצת הדורות.</li>
+								<li class="fragment fade-in-then-semi-out">ההתפתחויות המתימטיות בשלוש מאות השנים האחרונות שעיצבו את פני את המדע.</li>
+								<li class="fragment fade-in-then-semi-out">ההתפחויות המדעיות של מאתיים השנים האחרונות שאיפשרו את ההנדסה.</li>
+								<li class="fragment fade-in-then-semi-out">ההתפחויות ההנדסיות של מאה השנים האחרונות שאיפשרו את התעשייה.</li>
+								<li class="fragment fade-in-then-semi-out">המהפכה התעשייתית הרביעית, עידן ה AI, מחשוב קוואנטי וקץ הימים.</li>
+							</ul>
+						</p>
+						<h2 class="fragment fade-in-then-semi-out">על מנת:</h2>
+						<p>
+							<ul>
+								<li class="fragment fade-in-then-semi-out">להבין ברמה העקרונית את מהות "מדעי המחשב".</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>מכשירי חישוב</h1>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Tally_stick" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>~40,000BC</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Prayer_beads" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>~10,000BC</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Abacus" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>~400BC</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Slide_rule" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>~1600AD</h2>
+						</div>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>השפעות המאה ה-17</h1>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Pascaline" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1642</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Difference_engine" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1820</h2>
+						</div>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>השלכות המאה ה-20</h1>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Differential_analyser" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1912</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Enigma_machine" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1923</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Z3_(computer)" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1941</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Colossus_computer" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1943</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/Harwell_CADET" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1955</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/IBM_System/32" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1975</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/VAX" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>1977</h2>
+						</div>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>המאה ה-21</h1>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/IPhone" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>2007</h2>
+						</div>
+					</section>
+					<section data-background-iframe="https://en.wikipedia.org/wiki/IBM_Q_System_One" data-background-interactive>
+						<div class="fragment fade-down" style="margin-top:10%; margin-right:20%; margin-left:20%;  padding-left:10%; background-color:#00174277; text-align:center; ">
+							<h2>2019</h2>
+						</div>
+					</section>
+				</section>
+				<section style="padding-right:5%;">
+					<section>
+						<h1>סיכום</h1>
+					</section>
+					<section>
+						<h2>לסיכום:</h2>
+						<p>
+							<ul style="text-align:right; margin-left:20%" >
+								<li class="fragment fade-in">
+									האדם יצר מכונה שתעזור לו לחשוב.
+								</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				rtl: true,
+				controlsLayout: 'edges',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealZoom]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>
