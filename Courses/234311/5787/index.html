@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="he">
+	<head>
+		<title>234311/2</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="David Dovrat" >
+		<meta name="description" content="Capstone Project in Software Engineering">
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style>
+			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+			.w3-sidebar {
+				z-index: 3;
+				width: 250px;
+				top: 43px;
+				bottom: 0;
+				height: inherit;
+			}
+		</style>
+
+		<script type="module">
+			import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+		</script>
+	</head>
+
+	<body>
+		<!-- Navbar -->
+		<div class="w3-top">
+			<div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+				<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+				<a href="../index.html" class="w3-bar-item w3-button w3-theme-l1">234311/2</a>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+				<i class="fa fa-remove"></i>
+			</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#head"><h4><b>פרוייקטים</b></h4>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#ahslap">Ah-Slap!</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#rekhesh">רכש ומכרזים</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#kayamut">מרכז קיימות</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#hamama">חממה חברתית</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#clair">CLAIR</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#madmah">מדמ"ח</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#mifne">מפנה</a>
+			<a class="w3-bar-item w3-button w3-hover-black" href="#wildcard">קלף פרוע</a>
+		</nav>
+
+		<!-- Overlay effect when opening sidebar on small screens -->
+		<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+		<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+		<div class="w3-main" style="margin-left:250px; direction:rtl;">
+			<div id="head" class="w3-row w3-padding-64">
+				<!-- Article -->
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">שנה"ל תשפ"ז</h1>
+					<div style="font-size:24px;">
+						<p>
+							השנה אנחנו בסימן <em>אחווה טכניונית</em> עם ארבעה פרוייקטים שה"לקוחות" שלהם הם גופים בטכניון, ועוד שני פרוייקטים בשיתוף שלנו עם החממה החברתית של הטכניון.
+						</p>
+					</div>
+					<h2 class="w3-text-teal">מבנה ארגוני</h2>
+					<div style="direction:ltr;">
+						<pre class="mermaid">
+							flowchart BT
+								ITD(איתי דברן)
+								DD(דוד דברת)
+								MANHE1(עידו רם)
+								MANHE2(שקד עדי)
+								MANHE3(שירז שמולמן)
+								MANHE4(ביאן חיר)
+								P1(Ah-Slap!)
+								P2(מרכז קיימות)
+								P3(רכש ומכרזים)
+								P4(חממה חברתית)
+								P5(CLAIR)
+								P6(מפנה)
+								P7(מדעי המחשב)
+								P8(קלף פרוע)
+
+								DD--מדווח ל-->ITD
+								MANHE1--מדווח ל-->DD
+								MANHE2--מדווח ל-->DD
+								MANHE3--מדווח ל-->DD
+								MANHE4--מדווח ל-->DD
+
+								P6-.->|מקבל הנחייה מ|MANHE1
+								P8-.->|מקבל הנחייה מ|MANHE1
+								P3-.->|מקבל הנחייה מ|MANHE2
+								P7-.->|מקבל הנחייה מ|MANHE2
+								P5-.->|מקבל הנחייה מ|MANHE3
+								P1-.->|מקבל הנחייה מ|MANHE3
+								P4-.->|מקבל הנחייה מ|MANHE4
+								P2-.->|מקבל הנחייה מ|MANHE4
+						</pre>
+					</div>
+					<div style="font-size:24px;">
+						<p>
+						איתי דברן אחראי על הקורס - על המנחים, הרישום, הציונים הסופיים, המופעים המרכזיים.
+						דוד דברת אחראי על תכני ההוראה ועל ההערכה.
+						</p>
+						<p>
+						המנחים אחראים על הבקרה על קבוצות הסטודנטים, תפקידם לוודא תקינות הפעילות ובריאות תהליכי הצוות.
+						המנחים אינם חלק מהצוות, ואין להם אחריות על הצלחת הפרוייקט או הצלחת הצוותים.
+						תפקיד המנחים הוא לשקף את מצב הצוות בפני סגל הקורס, ולהבהיר את הנחיות סגל הקורס לצוותים.
+						</p>
+						<p>
+						אנחנו מתייחסים  ל"לקוחות" שלנו כאל, ובכן, לקוחות. אין לנו שליטה או אחריות עליהם, וטוב שכך. התנהלות מקצועית של כולנו תוביל לשנה מהנה וסיום מוצלח בבוא הזמן של הפרוייקטים.
+						</p>
+						<p>
+						הסטודנטים אחראים על הפרוייקטים שלהם - ניהול, תכנון וביצוע.
+						הציונים הם קבוצתיים, למעט מקרים חריגים ביותר, ולכן הקפידו על חלוקת עבודה הוגנת ביניכם, ואחראיות הדדית.
+						הקפידו לוודא אחד את השני, לבדוק אחד את השני, לשאול אחד את השני, לאתגר ולעזור אחד לשני.
+						אל תתנו לחבר בקבוצה למשוך אתכם, לגרור אתכם או לדחוף אתכם לכאן או לכאן, אל תזרמו.
+						הגיעו להסכמות.
+						</p>
+						<h2 class="w3-text-teal">מבנה הציון</h2>
+						<p>
+	לפי סדר כרונולוגי של מועדי הבחינה:
+						</p>
+						<ul>
+							<li>
+									20% HLD - שבוע 4
+							</li>
+							<li>
+									50% MVP - שבוע 6
+							</li>
+							<li>
+									25% ניהול הפרוייקט - שבוע 13, ע"פ מדידה שבועית לאורך כל הסמסטר החל משבוע 4, ומצגת כבחינה בע"פ במופע הסיום של סמסטר חורף.
+							</li>
+							<li>
+									5% נוכחות במופעי למידה לרוחב ובהצגה הסופית.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Figures -->
+				<div class="w3-third w3-container">
+					<a href="https://www.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://cdn-camp.mini-sites.net/Publish/df3788f386d54b7ab8a27c7aff71359f/e5ce7db5ee9845f7a5a7164dfc4da79f/src/contents/4ea142e28f4c4fd8bc6c2b1f1010977a_imgi_1_Technion_2025_TechnionLog.png" style="width:100%" alt="Technion"></p></a>
+				</div>
+			</div>
+
+			<div id="ahslap" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">!Ah-Slap</h1>
+					<p>
+							אחסל"פ - ראשי תיבות אחי סגור לי פינה. פלטפורמה קהילתית לעזרה הדדית - טרמפים, יד שנייה, הובלות, תיקונים קלים ועזרה כללית.
+					</p>
+					<p>
+						מיועד לקהילות שכבר מנהלות קבוצות מסוג זה בוואטסאפ או פלטפורמה לא יעודית.
+						האפליקציה שלנו תאפשר לקבוצות אלה להתנהל בצורה יותר מקצועית ויעילה.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://www.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://cdn-camp.mini-sites.net/Publish/df3788f386d54b7ab8a27c7aff71359f/e5ce7db5ee9845f7a5a7164dfc4da79f/src/contents/4ea142e28f4c4fd8bc6c2b1f1010977a_imgi_1_Technion_2025_TechnionLog.png" style="width:100%" alt="TBD"></p></a>
+				</div>
+			</div>
+			<div id="rekhesh" class="w3-row w3-padding-64" style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">יחידת המכרזים של הטכניון</h1>
+					<p >
+					גוף מקצועי לליווי ולקידום התקשרויות ומכרזים בטכניון.
+					יחידת המכרזים הוקמה בינואר 2014 ופועלת כיום במסגרת אגף רכש ומכרזים בטכניון.
+					היחידה פועלת בשיתוף פעולה עם כלל הפקולטות והיחידות בקמפוס, משמשת צומת תיאום בין יחידות הקמפוס השונות, ומסייעת בתרגום צרכים תפעוליים למסמכי מכרז והתקשרות תוך תיאום בין הגורמים המקצועיים, התקציביים והמשפטיים, ובהתאם לדין ולנהלי המוסד.
+					</p>
+					<p>
+						במסגרת הקורס אנו נקים עבור יחידת המכרזים מערכת ניטור דרישות סף על מנת ליעל את תהליך המכרז הטכניוני.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://michrazim.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://cdn-camp.mini-sites.net/Publish/df3788f386d54b7ab8a27c7aff71359f/e5ce7db5ee9845f7a5a7164dfc4da79f/src/contents/4ea142e28f4c4fd8bc6c2b1f1010977a_imgi_1_Technion_2025_TechnionLog.png" style="width:100%" alt="Technion Tenders"></p></a>
+				</div>
+			</div>
+			<div id="kayamut" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">מרכז הקיימות בטכניון</h1>
+					<p>
+					חזון חזית הקיימות – הטכניון יספק מודל מופתי לקיימות מקומית, לאומית וגלובלית באמצעות תוכניות החינוך והמחקר שלו ובאמצעות ההתנהלות הארגונית והתנהגות הקהילה שלו.
+					</p>
+					<p>
+					במסגרת הקורס אנו נבנה מערכת שתכליתה לחבר את ציבור העוברים בקמפוס לאתרים יפים ומעניינים בו, לקדם חיבור עם הטבע, ולעודד פעילות גופנית ובריאות נפש.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://sustainability.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center"><img src="https://sustainability.technion.ac.il/wp-content/themes/sustainability/images/logo.png" style="width:100%" alt="Sustainability at the Technion"></p></a>
+				</div>
+			</div>
+			<div id="hamama" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">החממה החברתית</h1>
+					<p>
+					החממה החברתית היא יחידה בטכניון, המתמחה במחקר ובחינוך למעורבות טכנולוגית בקהילה. החממה מקדמת סדר יום חברתי המעוגן בתיאוריות וביישום טכנולוגי, על מנת לאפשר לחברה הישראלית להתמודד עם אתגריה החברתיים והכלכליים באופן המיטבי. באופן זה, מקדמת החממה את חזון הטכניון כמוסד מוביל המופקד על פיתוח הון אנושי, מנהיגות ויצירת ידע.
+					</p>
+					<p>
+						במסגרת הקורס ניצור מערכת למניעת עושק שתכליתה להגן על בני הגיל השלישי מפני נוכלות מקוונת.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://socialhub.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center"><img src="https://socialhub.technion.ac.il/wp-content/themes/SocialHub/images/logo.png" style="width:100%" alt="Social Hub, Technion"></p></a>
+				</div>
+			</div>
+			<div id="clair" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">CLAIR</h1>
+					<p>
+					</p>
+					מעבדת
+					<strong>CLAIR</strong>
+					בפקולטה למדעי המחשב
+					עוסקת בחקר שיתוף פעולה במערכות בינה מלאכותית מרובות סוכנים, ובפיתוח יסודות תיאורטיים ושיטות חדשות לניצול בינה מלאכותית לצורך תכנון מערכות המסוגלות לתמוך בשיתופי פעולה יעילים, אמינים ובני־קיימא בין סוכנים אוטונומיים, וכן בין סוכנים אוטונומיים לבני אדם.
+					</p>
+					<p>
+לצד המחקר התיאורטי, המעבדה שואפת לבחון ולאמת את המסגרות והכלים שהיא מפתחת במגוון סביבות יישומיות של מערכות מרובות סוכנים, הן בסביבות וירטואליות והן במערכות רובוטיות הפועלות בעולם הפיזי.
+					</p>
+					<p>
+					במסגרת הקורס אנו נפתח תשתית אחודה לכלל מערכות CLAIR הקיימות והעתידיות.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://clair.cs.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://clair.cs.technion.ac.il/wp-content/themes/cgm/img/logo.png" style="width:100%" alt="CLAIR lab, Technion"></p></a>
+				</div>
+			</div>
+			<div id="madmah" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">הפקולטה למדעי המחשב</h1>
+					<p>
+						הפקולטה למדעי המחשב ע"ש הנרי ומרילין טאוב, הינה היחידה האקדמית השנייה בגודלה בטכניון, עם כ-1,800 תלמידי תואר ראשון (כחמישית ממספרם הכולל בטכניון) ולמעלה מ-300 תלמידי תארים מתקדמים. בפקולטה למעלה מ-50 חברי סגל בעלי מוניטין בינלאומי עם מומחיות במגוון רחב של שטחי מחקר. הפקולטה הינה הגדולה ביותר בארץ בתחום זה והיא מספקת כוח אדם איכותי ביותר לתעשיית ההייטק בישראל. היותה אחת מהפקולטות המבוקשות ביותר בטכניון מאפשר לה לבחור בעת ההרשמה את הסטודנטים הטובים ביותר. הפקולטה מעורבת במגוון רחב של פעילויות מחקר והוראה ומהווה נקודת מפגש ייחודית בין מדע וטכנולוגיה. הפקולטה מספקת אימון בסיסי במחשבים לכל קהיליית הסטודנטים בטכניון. צוות מיומן ומקצועי של מהנדסים, טכנאים ומזכירות תומך בפעילויות המחקר וההוראה בפקולטה.
+					</p>
+					<p>
+					במסגרת הקורס אנו ניצור מערכת לניהול וארגון ארועים, כנסים וטקסים של הפקולטה.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://www.cs.technion.ac.il"><p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://www.cs.technion.ac.il/img/heb-logo-cs-department.gif" style="width:100%" alt="CS @ Technion"></p></a>
+				</div>
+			</div>
+			<div id="mifne" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">מפנה</h1>
+					<p>
+						הקניית כלים פיננסים וחברתיים באמצעות משחק והפעלות דינמיות, בשילוב מתן דגש על בניית חזון אישי וכלכלי, הצבת יעדים, חיזוק האמונה ביכולת ההגשמה העצמית של כל אחד ואחת מהמשתתפים. הקניית ערכי הקשבה והידברות, יצירת כבוד הדדי, ניהול משא ומתן, פיתוח דימוי עצמי חיובי, שבירת מיתוסים ויצירת אפשרויות חדשות.
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://mifne4us.com/"><p class="w3-border w3-padding-large w3-padding-64 w3-center"><img src="https://mifne4us.com/wp-content/uploads/2021/05/new-logo250-e1679915916786.png" style="width:100%" alt="Mifne, Financial Literacy"></p></a>
+				</div>
+			</div>
+			<div id="wildcard" class="w3-row w3-padding-64"  style="font-size:24px;">
+				<div class="w3-twothird w3-container">
+					<h1 class="w3-text-teal">קלף פרוע (wildcard)</h1>
+					<p>
+						יש לכם רעיון יצירתי שמתאים למימוש במסגרת פרויקט גמר בהנדסת תוכנה? רוצים להתנסות בהקמת סטארטאפ בלי הסיכונים הכרוכים בזה? הרי לפניכם ההזדמנות!
+					</p>
+					<p>
+						תציעו רעיון לפרוייקט. הוא לא חייב להיות מבושל עד הסוף או בכלל, הוא לא חייב להיות רעיון עם פוטנציאל עסקי, הוא לא חייב להיות רעיון טוב.
+					</p>
+					<p>
+					מבין ההצעות, אנו נבחר את זו שהכי מתאימה למסגרת הקורס, ונרוץ איתכם!
+					</p>
+				</div>
+				<div class="w3-third w3-container">
+					<a href="https://icst.cs.technion.ac.il/"><p class="w3-border w3-padding-large w3-padding-64 w3-center" style="background-color:#001742;"><img src="https://icst.cs.technion.ac.il/wp-content/themes/ssdl/img/title-ssdl.png" style="width:100%" alt="ICST, Technion"></p></a>
+				</div>
+			</div>
+		<!-- END MAIN -->
+		</div>
+		<footer id="myFooter" style="text-align:center;">
+			<div class="w3-container w3-theme-l2 w3-padding-32">
+				<a href="https://www.cs.technion.ac.il/">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Neg.png" style="width:50%" alt="CS@Technion">
+				</a>
+			</div>
+			<div class="w3-container w3-theme-l1">
+				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+			</div>
+		</footer>
+		<script>
+			// Get the Sidebar
+			var mySidebar = document.getElementById("mySidebar");
+
+			// Get the DIV with overlay effect
+			var overlayBg = document.getElementById("myOverlay");
+
+			// Toggle between showing and hiding the sidebar, and add overlay effect
+			function w3_open() {
+				if (mySidebar.style.display === 'block') {
+					mySidebar.style.display = 'none';
+					overlayBg.style.display = "none";
+				} else {
+					mySidebar.style.display = 'block';
+					overlayBg.style.display = "block";
+				}
+			}
+
+			// Close the sidebar with the close button
+			function w3_close() {
+				mySidebar.style.display = "none";
+				overlayBg.style.display = "none";
+			}
+		</script>
+	</body>
+	</html>
