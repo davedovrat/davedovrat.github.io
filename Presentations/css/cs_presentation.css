@@ -1,3 +1,10 @@
+:root
+{
+	--technion:#001742;
+	--gold:#d39f10;
+	--light:#f5f6f8;
+}
+
 .cs-presentation-title{
 	left: 0;
 	bottom: 0;
@@ -46,7 +53,7 @@
 .reveal h2,
 .reveal h4,
 .reveal h6 {
-	color:#d39f10;
+	color:var(--gold);
 }
 
 .reveal section {
@@ -55,3 +62,41 @@
 	padding-left: 3%;
 }
 
+.tag
+{
+	display:inline-block;
+	padding:.5vh 1vw;
+	border:1px solid var(--technion);
+	color:var(--technion);
+	margin:.4vh
+}
+.double_col
+{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:3vw
+}
+
+.bigq
+{
+	font-size:4.8vh!important;
+	color:var(--technion);
+	font-weight:600
+}
+
+.callout
+{
+	background:#fff8e5;
+	border-left:.6vw solid var(--gold);
+	padding:2vh 2vw;
+	font-size:3vh;
+	margin-top:2vh
+}
+
+.card
+{
+	background:var(--light);
+	border-left:.5vw solid var(--gold);
+	padding:2vh 2vw;
+	font-size:3vh;
+}
