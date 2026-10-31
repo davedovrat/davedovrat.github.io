@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="author" content="David" >
+		<meta name="description" content="Try not to get sued.">
+
+		<title>Open Source Software Licenses</title>
+
+		<link rel="shortcut icon" href="https://cs.technion.ac.il/img/favicon/favicon.ico"/>
+
+		<link rel="stylesheet" href="../revealJS/dist/reset.css">
+		<link rel="stylesheet" href="../revealJS/dist/reveal.css">
+		<link rel="stylesheet" href="../revealJS/dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../revealJS/plugin/highlight/monokai.css">
+		
+		<!-- custom -->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Assistant'>
+		<link rel="stylesheet" href="../css/cs_presentation.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section data-background-color="white" style="padding:0;">
+					<div class="cs-presentation-title">
+						<div class="cs-presentation-title-trapezoid"></div>
+						<div style="padding-top:10%;">
+							<h1>OSS</h1>
+							<h4 style="background-color: #d39f10; color: white;">
+							 stand up for your copyrights
+							</h4>
+						</div>
+					</div>
+					<div class= "cs-presentation-footer" style= "padding-left: 50px">
+						<div class="cs-presentation-footer-logo">
+							<p style="color:#d39f10; ">&copy; David Dovrat, October 2026</p>
+						</div>
+						<div class="cs-presentation-footer-logo">
+							<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+						</div>
+					<div>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h1>Motivation</h1>
+						</div>
+					</section>
+					<section>
+						<div>
+							<h2>Objectives</h2>
+						</div>
+						<ul>
+							<li>Understand major open-source licenses</li>
+							<li>Compare permissive and copyleft approaches</li>
+							<li>Learn practical license-selection criteria</li>
+							<li>Identify obligations when reusing code</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Why should I care?</h2>
+						<div class="double_col">
+							<div>
+								<p class="bigq">“The source is on GitHub. Can I use it?”</p>
+								<div class="fragment fade-in">
+									<div class="callout">
+										<b>Not necessarily.</b>
+										Public source code is not automatically open source.
+										A license is what grants permissions to use, modify and redistribute.
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="fragment fade-in">
+									<div class="card">
+										<h2>A license answers practical questions</h2>
+										<ul>
+											<li>Can I use it commercially?</li>
+											<li>Can I modify and redistribute it?</li>
+											<li>Must I publish my source code?</li>
+											<li>Must my derivative use the same license?</li>
+											<li>Is there an explicit patent grant?</li>
+											<li>What notices must I preserve?</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Copy<span class="tag">left</span><span class="tag">right</span></h1>
+					</section>
+					<section>
+						<div style="padding-right: 20vw; text-align: left;">
+							<h2>Who's code is this anyway?</h2>
+							<p class="fragment fade-in">
+								By default, whomever wrote it.
+							</p>
+							<p class="fragment fade-in">
+								Unless otherwise stated.
+							</p>
+							<p class="fragment fade-in">
+								In this course, everything we write belongs to the <a href="https://trdf.technion.ac.il/">Technion R&D Foundation</a>.
+							</p>
+						<div>
+					</section>
+					<section>
+						<h2>Without a license,</h2>
+						<p class="fragment fade-in">
+							All rights reserved.
+						</p>
+					</section>
+					<section>
+						<h2>
+							Copyright & License
+						</h2>
+						<p class="fragment fade-in">
+							Copyright = ownership and control
+						</p>
+						<p class="fragment fade-in">
+							License = permission from the owner
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>OSS Licenses</h1>
+					</section>
+					<section>
+						<h2>Permissive Licenses</h2>
+					</section>
+					<section data-background-iframe="https://opensource.org/license/mit" data-background-interactive></section>
+					<section data-background-iframe="https://opensource.org/license/isc" data-background-interactive></section>
+					<section data-background-iframe="https://opensource.org/license/bsd-2-clause" data-background-interactive></section>
+					<section data-background-iframe="https://opensource.org/license/apache-2.0" data-background-interactive></section>
+					<section>
+						<h2>Copyleft Licenses</h2>
+					</section>
+					<section data-background-iframe="https://opensource.org/license/gpl-3.0" data-background-interactive></section>
+					<section data-background-iframe="https://opensource.org/license/agpl-3.0" data-background-interactive></section>
+					<section>
+						<h2>Lesser Copyleft</h2>
+					</section>
+					<section data-background-iframe="https://opensource.org/license/lgpl-3.0" data-background-interactive></section>
+					<section data-background-iframe="https://opensource.org/license/mpl-2.0" data-background-interactive></section>
+				</section>
+				<section>
+					<section>
+						<h1>Open Content</h1>
+					</section>
+					<section data-background-iframe="https://creativecommons.org/" data-background-interactive></section>
+				</section>
+				<section>
+					<section>
+						<h1>The Takeaway</h1>
+					</section>
+					<section>
+						<h3>License choice is an engineering decision</h3>
+					</section>
+					<section>
+						<h2>A selection heuristic</h2>
+						<div class="double_col">
+							<div>
+								<div class="card">
+									<h4>Maximum reuse:</h4>
+									<p><b>MIT / BSD / ISC</b></p>
+									<h4>Permissive, explicit patent terms:</h4>
+									<p><b>Apache 2.0</b></p>
+									<h4>Modifications to files/library remain open:</h4>
+									<p><b>MPL / LGPL</b></p>
+								</div>
+							</div>
+							<div>
+								<div class="card">
+									<h4>Distributed derivatives remain open:</h4>
+									<p><b>GPL</b></p>
+									<h4>Modified hosted/network versions share source:</h4>
+									<p><b>AGPL</b></p>
+									<h4>Licensing content, not code:</h4>
+									<p><b>Creative Commons / CC0</b></p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Disclaimer</h2>
+						<p>
+							this presentation is an educational overview, not legal advice.<br>
+							For product/compliance decisions, review the exact license text and dependency context.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Useful Resources & Further Inquiry</h1>
+					</section>
+					<section>
+						<h2>Useful Resources</h2>
+						<ul>
+							<li>
+								<a href="https://opensource.org/">The Open Source Initiative</a>.
+							</li>
+							<li>
+								<a href="http://fsf.org/">Free Software Foundation</a>.
+							</li>
+							<li>
+								<a href="https://creativecommons.org/">Creative Commons</a>.
+							</li>
+							<li>
+								<a href="https://ugportal.technion.ac.il/%D7%9E%D7%99%D7%93%D7%A2-%D7%9C%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/">Undergraduate Regulations and Procedures, Technion</a>.
+							</li>
+							<li>
+								<a href="https://redmonk.com/sogrady/2026/03/25/open-source-licensing-2026/">Choose a License; RedMonk, “State of Open Source Licensing in 2026”</a>.
+							</li>
+							<li>
+								<a href="https://innovationgraph.github.com/global-metrics/licenses">Github License Rankings Globally</a>.
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+
+			<div class="cs-presentation-footer">
+				<div class="cs-presentation-footer-trapezoid"></div>
+				<div class="cs-presentation-footer-logo">
+					<img src="https://www.cs.technion.ac.il/logo/technion_taub_cs-english/png/Technion_TaubCS_Logo_Pos.png" alt="CS@Technion">
+				</div>
+			</div>
+		</div>
+
+		<script src="../revealJS/dist/reveal.js"></script>
+		<script src="../revealJS/plugin/zoom/zoom.js"></script>
+		<script src="../revealJS/plugin/notes/notes.js"></script>
+		<script src="../revealJS/plugin/markdown/markdown.js"></script>
+		<script src="../revealJS/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealZoom]
+			});
+			
+			Reveal.configure({	backgroundTransition: 'concave',
+										transition: 'convex'
+									 });
+		</script>
+	</body>
+</html>

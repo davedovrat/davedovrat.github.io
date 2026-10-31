@@ -13,7 +13,7 @@
 }
 
 .cs-presentation-title-trapezoid{
-	border-bottom: 100vh solid #001742;
+	border-bottom: 100vh solid var(--technion);
 	border-right: 50vh solid transparent;
 	width: 50%;
 }
@@ -26,7 +26,7 @@
 }
 
 .cs-presentation-footer-trapezoid{
-	border-bottom: 16vh solid #001742;
+	border-bottom: 16vh solid var(--technion);
 	border-right: 8vh solid transparent;
 	height: 0;
 	left:0;
@@ -41,13 +41,10 @@
 
 .reveal,
 .reveal h1,
-.reveal h2,
 .reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
+.reveal h5 {
 	font-family: "Assistant";
-	color:#001742;
+	color:var(--technion);
 }
 
 .reveal h2,
@@ -73,7 +70,7 @@
 .double_col
 {
 	display:grid;
-	grid-template-columns:1fr 1fr;
+	grid-template-columns:4fr 4fr 1fr;
 	gap:3vw
 }
 
@@ -99,4 +96,5 @@
 	border-left:.5vw solid var(--gold);
 	padding:2vh 2vw;
 	font-size:3vh;
+	margin-right:2vh
 }
